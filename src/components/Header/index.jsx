@@ -6,7 +6,7 @@ const Header = () => {
     <div className="flex justify-between items-center h-16">
       <div>
         <h1 className="font-bold text-2xl text-[#293856s]">
-          <span className="text-[#4263EB]">DEV</span>Task
+          <span className="text-[#4263EB]">PIN</span>Task
         </h1>
       </div>
       <div className="flex items-center gap-3">
