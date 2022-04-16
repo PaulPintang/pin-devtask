@@ -6,9 +6,11 @@ const Login = () => {
   const [value, setValue] = useState("");
   return (
     <div className="h-screen flex items-center flex-col justify-around">
-      <h1 className="font-bold text-3xl text-[#293856s]">
-        <span className="text-[#4263EB]">iDEV</span>Task
-      </h1>
+      <Link to="/" style={{ textDecoration: "none" }}>
+        <h1 className="font-bold text-3xl text-[#293856]">
+          <span className="text-[#4263EB]">iDEV</span>Task
+        </h1>
+      </Link>
       <div className="w-[340px] mx-auto">
         <Card shadow="sm" p="lg" className="space-y-5">
           <div>

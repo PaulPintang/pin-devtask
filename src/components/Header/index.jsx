@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div className="flex justify-between items-center h-16">
-      <div>
-        <h1 className="font-bold text-2xl text-[#293856s]">
+      <Link to="/" style={{ textDecoration: "none" }}>
+        <h1 className="font-bold text-2xl text-[#293856]">
           <span className="text-[#4263EB]">iDEV</span>Task
         </h1>
-      </div>
+      </Link>
       <div className="flex items-center gap-3">
         <Link to="/login">
           <Button variant="outline" color="indigo" size="xs">
