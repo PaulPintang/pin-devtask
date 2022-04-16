@@ -10,24 +10,16 @@ const Header = () => {
         </h1>
       </div>
       <div className="flex items-center gap-3">
-        <Button variant="outline" color="indigo" size="xs">
-          <Link
-            to="/login"
-            className="text-[#4263EB]"
-            style={{ textDecoration: "none" }}
-          >
+        <Link to="/login">
+          <Button variant="outline" color="indigo" size="xs">
             Login
-          </Link>
-        </Button>
-        <Button color="indigo" size="xs" px={25}>
-          <Link
-            to="/signup"
-            className="text-white"
-            style={{ textDecoration: "none" }}
-          >
+          </Button>
+        </Link>
+        <Link to="/signup">
+          <Button color="indigo" size="xs" px={25}>
             Sign up
-          </Link>
-        </Button>
+          </Button>
+        </Link>
       </div>
     </div>
   );
