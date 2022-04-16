@@ -1,6 +1,12 @@
 import React from "react";
+import { Route, Routes, Switch } from "react-router-dom";
+import LandingPage from "./pages/LandingPage";
 function App() {
-  return <div className="text-blue-400">app</div>;
+  return (
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+    </Routes>
+  );
 }
 
 export default App;
