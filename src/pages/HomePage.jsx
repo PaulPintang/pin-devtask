@@ -6,9 +6,10 @@ const HomePage = () => {
     <div className="px-7">
       <Header />
       <div className="h-[calc(100vh-6rem)] flex">
-        <div className="w-[250px] bg-gr ay-50">
+        <div className="w-[280px] bg-gr ay-50">
           <Navbar />
         </div>
+        <div className="bg-gray-50 h-full w-full"></div>
       </div>
     </div>
   );

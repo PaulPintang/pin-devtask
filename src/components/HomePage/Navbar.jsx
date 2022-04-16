@@ -1,17 +1,16 @@
 import React from "react";
-import Header from "../Header";
 const Navbar = () => {
   return (
-    <div className="p- flex flex-col justify-between h-full">
+    <div className="pr-7 flex flex-col justify-between h-full">
       <div>
         <div className="py-5">
           <p className="text-gray-600 uppercase text-xs pb-5">Workspace</p>
-          <div className="space-y-2">
-            <div className="flex items-center gap-3 w-full bg-gray-100 px-2 py-1">
+          <div className="space-y-1">
+            <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1">
               <i class="fa-solid fa-list-check text-gray-400"></i>
               <p className="text-gray-700">Your Task</p>
             </div>
-            <div className="flex items-center gap-3 w-full bg-gray-100 px-2 py-1">
+            <div className="flex items-center gap-3 w-full bg -gray-100 px-2 py-1">
               <i class="fa-regular fa-message text-gray-400"></i>
               <p className="text-gray-700">Messages</p>
             </div>
