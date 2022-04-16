@@ -12,9 +12,9 @@ const Login = () => {
       <div className="w-[340px] mx-auto">
         <Card shadow="sm" p="lg" className="space-y-5">
           <div>
-            <h1 className="text-gray-700 text-lg">Get Started</h1>
+            <h1 className="text-gray-700 text-lg">Welcome back!</h1>
             <p className="text-[11px] text-gray-500">
-              Welcome, Please login to continue
+              Please login your account to continue
             </p>
           </div>
           <div className="space-y-1">
@@ -56,9 +56,9 @@ const Login = () => {
       </div>
       <div>
         <p className="text-[12px] text-gray-500">
-          Need an account?
+          Don't have an account?
           <Link to="/signup" style={{ textDecoration: "none" }}>
-            <span className="text-blue-500"> Signup</span>
+            <span className="text-blue-500"> Sign up for free</span>
           </Link>
         </p>
       </div>
