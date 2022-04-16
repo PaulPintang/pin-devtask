@@ -5,6 +5,8 @@ import { Container, MantineProvider } from "@mantine/core";
 // Components
 import LandingPage from "./pages/LandingPage";
 import Header from "./components/Header";
+import Login from "./auth/Login";
+import Signup from "./auth/SingUp";
 function App() {
   return (
     <MantineProvider emotionOptions={{ key: "mantine", prepend: false }}>
@@ -12,6 +14,8 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<LandingPage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </Container>
     </MantineProvider>
