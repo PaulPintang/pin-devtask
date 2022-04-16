@@ -3,7 +3,7 @@ import { Button } from "@mantine/core";
 
 const Header = () => {
   return (
-    <div className="flex justify-between items-center h-16 max-w-[1200px] mx-auto">
+    <div className="flex justify-between items-center h-16">
       <div>
         <h1 className="font-bold text-2xl text-[#293856s]">
           <span className="text-[#4263EB]">DEV</span>Task
