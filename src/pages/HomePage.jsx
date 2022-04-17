@@ -3,13 +3,15 @@ import Header from "../components/Header";
 import Navbar from "../components/HomePage/Navbar";
 const HomePage = () => {
   return (
-    <div className="px-7">
-      <Header />
-      <div className="h-[calc(100vh-6rem)] flex">
-        <div className="w-[280px] bg-gr ay-50">
+    <div className="">
+      <div className="shadow-sm px-7">
+        <Header />
+      </div>
+      <div className="h-[calc(100vh-4rem)] flex">
+        <div className="w-[280px] px-7">
           <Navbar />
         </div>
-        <div className="bg-gray-50 h-full w-full"></div>
+        <div className="bg-gray-50 h-full w-full border-t border-l border-gray-100"></div>
       </div>
     </div>
   );
