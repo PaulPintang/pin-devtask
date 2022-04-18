@@ -1,10 +1,55 @@
-import React from "react";
-import { Button } from "@mantine/core";
+import React, { useState } from "react";
 import { FiMoreHorizontal } from "react-icons/fi";
+import { RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri";
 const Table = () => {
+  const [showFilter, setShowFilter] = useState(false);
   return (
     <div>
       <div className="bg-white shadow-md dark:bg-gray-800 mb-8 rounded-md p-2">
+        <div className="flex justify-between items-center py-2">
+          <div>
+            <p className="text-gray-700">All Tasks</p>
+          </div>
+          <div className="relative">
+            <div
+              className="flex items-center gap-2 "
+              onClick={() => setShowFilter(!showFilter)}
+            >
+              <div className="w-10 h-2 bg-green-300 "></div>
+              {showFilter ? (
+                <RiArrowDownSLine className="text-gray-400" />
+              ) : (
+                <RiArrowUpSLine className="text-gray-400" />
+              )}
+            </div>
+            {showFilter && (
+              <div className="absolute z-50 ">
+                <div className="shadow-md bg-white p-3 flex flex-col justify-center items-center rounded">
+                  <div className="">
+                    <button>
+                      <div className="w-10 h-2 bg-yellow-300 "></div>
+                    </button>
+                  </div>
+                  <div className="">
+                    <button>
+                      <div className="w-10 h-2 bg-green-300 "></div>
+                    </button>
+                  </div>
+                  <div className="">
+                    <button>
+                      <div className="w-10 h-2 bg-blue-300 "></div>
+                    </button>
+                  </div>
+                  <div className="">
+                    <button>
+                      <div className="w-10 h-2 bg-red-300 "></div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
         <table className="min-w-full  border-collapse w-full border-none ">
           <thead className="sticky top-0 z-30  dark:bg-[#2D3746]">
             <tr>
@@ -63,7 +108,7 @@ const Table = () => {
               </td>
               <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
                 <div className="flex bg-gray-100 rounded items-center max-w-max px-2 py-1 gap-2">
-                  <div className="w-2 h-2 bg-green-300 ro"></div>
+                  <div className="w-2 h-2 bg-green-300 "></div>
                   <span className=" text-green-500   text-[9px]">
                     Completed
                   </span>
@@ -92,7 +137,7 @@ const Table = () => {
               </td>
               <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
                 <div className="flex bg-gray-100 rounded items-center max-w-[78px] px-2 py-1 gap-2">
-                  <div className="w-2 h-2 bg-red-300 ro"></div>
+                  <div className="w-2 h-2 bg-red-300 "></div>
                   <span className=" text-red-400 text-[9px]">For QA</span>
                 </div>
               </td>
@@ -119,7 +164,7 @@ const Table = () => {
               </td>
               <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
                 <div className="flex bg-gray-100 rounded items-center max-w-max px-2 py-1 gap-2">
-                  <div className="w-2 h-2 bg-green-300 ro"></div>
+                  <div className="w-2 h-2 bg-green-300 "></div>
                   <span className=" text-green-500   text-[9px]">
                     Completed
                   </span>
@@ -148,7 +193,7 @@ const Table = () => {
               </td>
               <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
                 <div className="flex bg-gray-100 rounded items-center max-w-max px-2 py-1 gap-2">
-                  <div className="w-2 h-2 bg-green-300 ro"></div>
+                  <div className="w-2 h-2 bg-green-300 "></div>
                   <span className=" text-green-500   text-[9px]">
                     Completed
                   </span>
