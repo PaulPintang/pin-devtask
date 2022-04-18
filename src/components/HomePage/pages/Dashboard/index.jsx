@@ -3,8 +3,8 @@ import { Grid } from "@mantine/core";
 import Table from "./components/Table";
 const Dashboard = () => {
   return (
-    <Grid grow className="h-full">
-      <Grid.Col span={8}>
+    <Grid justify="space-between" className="h-full">
+      <Grid.Col span={8} className="h-2/4">
         <div className=" w-full h-full p-3">
           <div>
             <p className="text-[12px] text-gray-400">Monday, April 18</p>
@@ -87,7 +87,7 @@ const Dashboard = () => {
       <Grid.Col span={4}>
         <div className="bg-gray-300 w-full h-full"></div>
       </Grid.Col>
-      <Grid.Col span={8}>
+      <Grid.Col span={8} className="h-2/4">
         <div className="w-full h-full">
           <Table />
         </div>
