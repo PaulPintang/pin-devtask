@@ -21,23 +21,63 @@ const Dashboard = () => {
           <div className="py-3">
             <div className="flex flex-col md:flex-row lg:flex-row lg:justify-start lg:items-center gap-2 md:gap-4 lg:gap-4 pb-3">
               <div className="flex gap-3 items-center">
-                <div className="bg-yellow-300 w-8 h-2"></div>
+                <div className="bg-yellow-300 w-2 h-2"></div>
                 <small className="text-gray-400  text-[10px] uppercase font-semibold ">
                   All task
                 </small>
               </div>
 
               <div className="flex gap-3 items-center">
-                <div className="w-8 h-2 bg-red-300"></div>
+                <div className="w-2 h-2 bg-blue-300"></div>
                 <small className="text-gray-400  text-[10px] uppercase font-semibold ">
                   In-Progress
                 </small>
               </div>
               <div className="flex gap-3 items-center">
-                <div className="bg-green-300 w-8 h-2"></div>
+                <div className="bg-green-300 w-2 h-2"></div>
                 <small className="text-gray-400  text-[10px] uppercase font-semibold ">
                   Completed
                 </small>
+              </div>
+              <div className="flex gap-3 items-center">
+                <div className="bg-red-300 w-2 h-2"></div>
+                <small className="text-gray-400  text-[10px] uppercase font-semibold ">
+                  For QA
+                </small>
+              </div>
+            </div>
+            <div className="w-full flex justify-between items-center gap-2">
+              <div className=" bg-opacity-60 rounded-md shadow-md w-full">
+                <div className="h-[110px] text-center">
+                  <div className="h-full flex flex-col items-center justify-center">
+                    <h1 className="text-2xl text-gray-700">9 Tasks</h1>
+                    <div className="bg-yellow-300 w-8 h-2"></div>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-opacity-60 rounded-md shadow-md w-full">
+                <div className="h-[110px] text-center">
+                  <div className="h-full flex flex-col items-center justify-center">
+                    <h1 className="text-2xl text-gray-700">1 Task</h1>
+                    <div className="bg-blue-300 w-8 h-2"></div>
+                  </div>
+                </div>
+              </div>
+              <div className=" bg-opacity-60 rounded-md shadow-md w-full">
+                <div className="h-[110px] text-center">
+                  <div className="h-full flex flex-col items-center justify-center">
+                    <h1 className="text-2xl text-gray-700">9 Task</h1>
+                    <div className="bg-green-300 w-8 h-2"></div>
+                  </div>
+                </div>
+              </div>
+              <div className=" bg-opacity-60 rounded-md shadow-md w-full">
+                <div className="h-[110px] text-center">
+                  <div className="h-full flex flex-col items-center justify-center">
+                    <h1 className="text-2xl text-gray-700">2 Tasks</h1>
+                    <div className="bg-red-300 w-8 h-2"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
