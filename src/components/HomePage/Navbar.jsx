@@ -6,9 +6,7 @@ import {
   MdOutlineAddTask,
   MdTimelapse,
 } from "react-icons/md";
-import { BsCardChecklist } from "react-icons/bs";
 import { VscTasklist } from "react-icons/vsc";
-// import
 const Navbar = () => {
   const members = [
     {
@@ -50,7 +48,7 @@ const Navbar = () => {
   return (
     <div className="py-2 flex flex-col justify-between h-full ">
       <div>
-        <div className="py-5">
+        <div className="py-3">
           <div className="flex items-center gap-2 pb-6">
             <div className="w-[50px]">
               <img src={me} alt="" />
@@ -93,13 +91,8 @@ const Navbar = () => {
               <p className="text-gray-700 text-[12.2px]">QA'sToComply</p>
             </div>
             <div className="flex items-center gap-3 w-full bg -gray-100 px-2 py-1">
-              {/* <i class="fa-regular fa-message text-gray-400"></i> */}
               <MdTimelapse className="text-gray-400 " />
               <p className="text-gray-700 text-[12.2px]">TimeSheets</p>
-            </div>
-            <div className="flex items-center h-full gap-3 w-full bg -gray-100 px-2 py-1">
-              <BsCardChecklist className="text-gray-400 text-lg pb-1" />
-              <p className="text-gray-700 text-[12.2px]">Records</p>
             </div>
           </div>
           <div className="space-y-1 ">
@@ -107,93 +100,21 @@ const Navbar = () => {
               <p className="text-gray-400 text-[10px]">MEMBERS</p>
             </div>
             <div className="h-[190px] overflow-y-scroll" id="scrollbar">
-              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
-                <div className="w-8 h-8">
-                  <img src={me} alt="" className="w-full" />
+              <div className=" w-full bg- gray-100 px-2 py-1 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8">
+                    <img src={me} alt="" className="w-full" />
+                  </div>
+                  <div className="flex flex-col">
+                    <p className="text-gray-500 text-[11px]">
+                      Paul Justine Pintang
+                    </p>
+                    <p className="text-gray-500 text-[9px] bg-green-200 rounded w-max px-2">
+                      <span className="font-semibold text-gray-600">184</span>{" "}
+                      pending hours
+                    </p>
+                  </div>
                 </div>
-                <p className="text-gray-500 text-[11px]">
-                  Paul Justine Pintang
-                </p>
-              </div>
-              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
-                <div className="w-8 h-8">
-                  <img src={me} alt="" className="w-full" />
-                </div>
-                <p className="text-gray-500 text-[11px]">
-                  Paul Justine Pintang
-                </p>
-              </div>
-              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
-                <div className="w-8 h-8">
-                  <img src={me} alt="" className="w-full" />
-                </div>
-                <p className="text-gray-500 text-[11px]">
-                  Paul Justine Pintang
-                </p>
-              </div>
-              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
-                <div className="w-8 h-8">
-                  <img src={me} alt="" className="w-full" />
-                </div>
-                <p className="text-gray-500 text-[11px]">
-                  Paul Justine Pintang
-                </p>
-              </div>
-              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
-                <div className="w-8 h-8">
-                  <img src={me} alt="" className="w-full" />
-                </div>
-                <p className="text-gray-500 text-[11px]">
-                  Paul Justine Pintang
-                </p>
-              </div>
-              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
-                <div className="w-8 h-8">
-                  <img src={me} alt="" className="w-full" />
-                </div>
-                <p className="text-gray-500 text-[11px]">
-                  Paul Justine Pintang
-                </p>
-              </div>
-              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
-                <div className="w-8 h-8">
-                  <img src={me} alt="" className="w-full" />
-                </div>
-                <p className="text-gray-500 text-[11px]">
-                  Paul Justine Pintang
-                </p>
-              </div>
-              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
-                <div className="w-8 h-8">
-                  <img src={me} alt="" className="w-full" />
-                </div>
-                <p className="text-gray-500 text-[11px]">
-                  Paul Justine Pintang
-                </p>
-              </div>
-              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
-                <div className="w-8 h-8">
-                  <img src={me} alt="" className="w-full" />
-                </div>
-                <p className="text-gray-500 text-[11px]">
-                  Paul Justine Pintang
-                </p>
-              </div>
-              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
-                <div className="w-8 h-8">
-                  <img src={me} alt="" className="w-full" />
-                </div>
-                <p className="text-gray-500 text-[11px]">
-                  Paul Justine Pintang
-                </p>
-              </div>
-              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
-                <div className="w-8 h-8">
-                  <img src={me} alt="" className="w-full" />
-                </div>
-                <p className="text-gray-500 text-[11px]">
-                  Paul Justine Pintang
-                </p>
               </div>
             </div>
           </div>
