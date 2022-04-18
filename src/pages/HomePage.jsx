@@ -1,12 +1,8 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
 import Navbar from "../components/HomePage/Navbar";
 // homepage pages
-import { Route, Routes } from "react-router-dom";
-import Dashboard from "../components/HomePage/pages/Dashboard";
-import Timesheet from "../components/HomePage/pages/TimeSheet";
-import Task from "../components/HomePage/pages/Task";
-
 const HomePage = () => {
   return (
     <div className="">
@@ -18,11 +14,7 @@ const HomePage = () => {
           <Navbar />
         </div>
         <div className="bg-gray-50 h-full w-full border-t border-l border-gray-100">
-          <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/task" element={<Task />} />
-            <Route path="/timesheet" element={<Timesheet />} />
-          </Routes>
+          <Outlet />
         </div>
       </div>
     </div>

@@ -1,5 +1,7 @@
 import React from "react";
 import me from "../../assets/me.png";
+
+import { Link } from "react-router-dom";
 import { BiMessageRounded, BiGitRepoForked } from "react-icons/bi";
 import {
   MdOutlineAutoGraph,
@@ -37,10 +39,12 @@ const Navbar = () => {
             <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1">
               <p className="text-gray-400 text-[10px]">MENU</p>
             </div>
-            <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-2 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
-              <VscTasklist className="text-gray-400" />
-              <p className="text-gray-700 text-[12.2px]">Your Task</p>
-            </div>
+            <Link to="/task" style={{ textDecoration: "none" }}>
+              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-2 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
+                <VscTasklist className="text-gray-400" />
+                <p className="text-gray-700 text-[12.2px]">Your Task</p>
+              </div>
+            </Link>
             <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-2 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
               <MdOutlineAutoGraph className="text-gray-400" />
               <p className="text-gray-700 text-[12.2px]">Performance</p>
