@@ -12,7 +12,6 @@ import Dashboard from "./components/HomePage/pages/Dashboard";
 import Task from "./components/HomePage/pages/Task";
 import Timesheet from "./components/HomePage/pages/TimeSheet";
 import Performance from "./components/HomePage/pages/Performance";
-import QAsToComply from "./components/HomePage/pages/QAToComply";
 
 function App() {
   return (
@@ -26,7 +25,6 @@ function App() {
           <Route path="/task" element={<Task />} />
           <Route path="/timesheet" element={<Timesheet />} />
           <Route path="/performance" element={<Performance />} />
-          <Route path="/toComply" element={<QAsToComply />} />
         </Route>
       </Routes>
     </MantineProvider>
