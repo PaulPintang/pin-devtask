@@ -5,6 +5,7 @@ import {
   MdOutlineAutoGraph,
   MdOutlineAddTask,
   MdTimelapse,
+  // MdDarkMode,
 } from "react-icons/md";
 import { VscTasklist } from "react-icons/vsc";
 const Navbar = () => {
@@ -70,8 +71,22 @@ const Navbar = () => {
                   </div>
                   <div className="flex flex-col">
                     <p className="text-gray-500 text-[11px]">
-                      Paul Justine Pintang
+                      Maria Juana De Puta
                     </p>
+                    <p className="text-gray-500 text-[9px] bg-gray-00 rounded">
+                      <span className="font-semibold text-gray-600">356</span>{" "}
+                      hours pending
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className=" w-full bg- gray-100 px-2 py-1 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8">
+                    <img src={me} alt="" className="w-full" />
+                  </div>
+                  <div className="flex flex-col">
+                    <p className="text-gray-500 text-[11px]">Juan Dela Cruz</p>
                     <p className="text-gray-500 text-[9px] bg-gray-00 rounded">
                       <span className="font-semibold text-gray-600">184</span>{" "}
                       hours pending
@@ -79,8 +94,25 @@ const Navbar = () => {
                   </div>
                 </div>
               </div>
+              <div className=" w-full bg- gray-100 px-2 py-1 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8">
+                    <img src={me} alt="" className="w-full" />
+                  </div>
+                  <div className="flex flex-col">
+                    <p className="text-gray-500 text-[11px]">Oscar Hidalgo</p>
+                    <p className="text-gray-500 text-[9px] bg-gray-00 rounded">
+                      <span className="font-semibold text-gray-600">97</span>{" "}
+                      hours pending
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+          {/* <div>
+            <MdDarkMode className="text-gray-500" />
+          </div> */}
         </div>
       </div>
       <div className="py-2"></div>
