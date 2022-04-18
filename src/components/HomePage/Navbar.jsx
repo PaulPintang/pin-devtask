@@ -107,91 +107,91 @@ const Navbar = () => {
               <p className="text-gray-400 text-[10px]">MEMBERS</p>
             </div>
             <div className="h-[190px] overflow-y-scroll" id="scrollbar">
-              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1">
+              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
                 <div className="w-8 h-8">
                   <img src={me} alt="" className="w-full" />
                 </div>
-                <p className="text-gray-500 text-xs font-semibold">
+                <p className="text-gray-500 text-[11px]">
                   Paul Justine Pintang
                 </p>
               </div>
-              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1">
+              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
                 <div className="w-8 h-8">
                   <img src={me} alt="" className="w-full" />
                 </div>
-                <p className="text-gray-500 text-xs font-semibold">
+                <p className="text-gray-500 text-[11px]">
                   Paul Justine Pintang
                 </p>
               </div>
-              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1">
+              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
                 <div className="w-8 h-8">
                   <img src={me} alt="" className="w-full" />
                 </div>
-                <p className="text-gray-500 text-xs font-semibold">
+                <p className="text-gray-500 text-[11px]">
                   Paul Justine Pintang
                 </p>
               </div>
-              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1">
+              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
                 <div className="w-8 h-8">
                   <img src={me} alt="" className="w-full" />
                 </div>
-                <p className="text-gray-500 text-xs font-semibold">
+                <p className="text-gray-500 text-[11px]">
                   Paul Justine Pintang
                 </p>
               </div>
-              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1">
+              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
                 <div className="w-8 h-8">
                   <img src={me} alt="" className="w-full" />
                 </div>
-                <p className="text-gray-500 text-xs font-semibold">
+                <p className="text-gray-500 text-[11px]">
                   Paul Justine Pintang
                 </p>
               </div>
-              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1">
+              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
                 <div className="w-8 h-8">
                   <img src={me} alt="" className="w-full" />
                 </div>
-                <p className="text-gray-500 text-xs font-semibold">
+                <p className="text-gray-500 text-[11px]">
                   Paul Justine Pintang
                 </p>
               </div>
-              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1">
+              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
                 <div className="w-8 h-8">
                   <img src={me} alt="" className="w-full" />
                 </div>
-                <p className="text-gray-500 text-xs font-semibold">
+                <p className="text-gray-500 text-[11px]">
                   Paul Justine Pintang
                 </p>
               </div>
-              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1">
+              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
                 <div className="w-8 h-8">
                   <img src={me} alt="" className="w-full" />
                 </div>
-                <p className="text-gray-500 text-xs font-semibold">
+                <p className="text-gray-500 text-[11px]">
                   Paul Justine Pintang
                 </p>
               </div>
-              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1">
+              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
                 <div className="w-8 h-8">
                   <img src={me} alt="" className="w-full" />
                 </div>
-                <p className="text-gray-500 text-xs font-semibold">
+                <p className="text-gray-500 text-[11px]">
                   Paul Justine Pintang
                 </p>
               </div>
-              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1">
+              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
                 <div className="w-8 h-8">
                   <img src={me} alt="" className="w-full" />
                 </div>
-                <p className="text-gray-500 text-xs font-semibold">
+                <p className="text-gray-500 text-[11px]">
                   Paul Justine Pintang
                 </p>
               </div>
-              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1">
+              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
                 <div className="w-8 h-8">
                   <img src={me} alt="" className="w-full" />
                 </div>
-                <p className="text-gray-500 text-xs font-semibold">
+                <p className="text-gray-500 text-[11px]">
                   Paul Justine Pintang
                 </p>
               </div>
