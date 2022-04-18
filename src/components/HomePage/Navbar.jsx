@@ -8,43 +8,6 @@ import {
 } from "react-icons/md";
 import { VscTasklist } from "react-icons/vsc";
 const Navbar = () => {
-  const members = [
-    {
-      id: 1,
-      name: "Maria Clara",
-      pic: "../../assets/members/img1.png",
-    },
-    {
-      id: 2,
-      name: "Maria Clara",
-      pic: "../../assets/members/img1.png",
-    },
-    {
-      id: 3,
-      name: "Maria Clara",
-      pic: "../../assets/members/img1.png",
-    },
-    {
-      id: 4,
-      name: "Maria Clara",
-      pic: "../../assets/members/img1.png",
-    },
-    {
-      id: 5,
-      name: "Maria Clara",
-      pic: "../../assets/members/img1.png",
-    },
-    {
-      id: 6,
-      name: "Maria Clara",
-      pic: "../../assets/members/img1.png",
-    },
-    {
-      id: 7,
-      name: "Maria Clara",
-      pic: "../../assets/members/img1.png",
-    },
-  ];
   return (
     <div className="py-2 flex flex-col justify-between h-full ">
       <div>
@@ -69,34 +32,34 @@ const Navbar = () => {
               <p className="text-gray-700 text-[12.2px]">Components</p>
             </div>
           </div>
-          <div className="space-y-1">
+          <div className="space-y-">
             <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1">
               <p className="text-gray-400 text-[10px]">MENU</p>
             </div>
-            <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1">
+            <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-2 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
               <VscTasklist className="text-gray-400" />
               <p className="text-gray-700 text-[12.2px]">Your Task</p>
             </div>
-            <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1">
+            <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-2 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
               <MdOutlineAutoGraph className="text-gray-400" />
               <p className="text-gray-700 text-[12.2px]">Performance</p>
             </div>
-            <div className="flex items-center gap-3 w-full bg -gray-100 px-2 py-1">
+            <div className="flex items-center gap-3 w-full bg -gray-100 px-2 py-2 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
               <BiMessageRounded className="text-gray-400 text-lg" />
               <p className="text-gray-700 text-[12.2px]">Messages</p>
             </div>
 
-            <div className="flex items-center gap-3 w-full bg -gray-100 px-2 py-1">
+            <div className="flex items-center gap-3 w-full bg -gray-100 px-2 py-2 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
               <MdOutlineAddTask className="text-gray-400" />
               <p className="text-gray-700 text-[12.2px]">QA'sToComply</p>
             </div>
-            <div className="flex items-center gap-3 w-full bg -gray-100 px-2 py-1">
+            <div className="flex items-center gap-3 w-full bg -gray-100 px-2 py-2 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
               <MdTimelapse className="text-gray-400 " />
               <p className="text-gray-700 text-[12.2px]">TimeSheets</p>
             </div>
           </div>
           <div className="space-y-1 ">
-            <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1">
+            <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
               <p className="text-gray-400 text-[10px]">MEMBERS</p>
             </div>
             <div className="h-[190px] overflow-y-scroll" id="scrollbar">
@@ -109,9 +72,9 @@ const Navbar = () => {
                     <p className="text-gray-500 text-[11px]">
                       Paul Justine Pintang
                     </p>
-                    <p className="text-gray-500 text-[9px] bg-green-200 rounded w-max px-2">
+                    <p className="text-gray-500 text-[9px] bg-gray-00 rounded">
                       <span className="font-semibold text-gray-600">184</span>{" "}
-                      pending hours
+                      hours pending
                     </p>
                   </div>
                 </div>
