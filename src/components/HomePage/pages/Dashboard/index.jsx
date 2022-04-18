@@ -4,7 +4,44 @@ const Dashboard = () => {
   return (
     <Grid grow className="h-full">
       <Grid.Col span={8}>
-        <div className="bg-gray-300 w-full h-full"></div>
+        <div className=" w-full h-full p-3">
+          <div>
+            <p className="text-[13px] text-gray-400">Monday, April 18</p>
+            <div className="flex flex-col">
+              <p className="text-gray-700 text-2xl">Good Morning, Paul</p>
+              <small className="text-gray-700 text-[11px]">
+                You have a total of
+                <span className="font-semibold text-gray-700 px-1">
+                  9 completed tasks
+                </span>
+                as of now.
+              </small>
+            </div>
+          </div>
+          <div className="py-3">
+            <div className="flex flex-col md:flex-row lg:flex-row lg:justify-start lg:items-center gap-2 md:gap-4 lg:gap-4 pb-3">
+              <div className="flex gap-3 items-center">
+                <div className="bg-yellow-300 w-8 h-2"></div>
+                <small className="text-gray-400  text-[10px] uppercase font-semibold ">
+                  All task
+                </small>
+              </div>
+
+              <div className="flex gap-3 items-center">
+                <div className="w-8 h-2 bg-red-300"></div>
+                <small className="text-gray-400  text-[10px] uppercase font-semibold ">
+                  In-Progress
+                </small>
+              </div>
+              <div className="flex gap-3 items-center">
+                <div className="bg-green-300 w-8 h-2"></div>
+                <small className="text-gray-400  text-[10px] uppercase font-semibold ">
+                  Completed
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
       </Grid.Col>
       <Grid.Col span={4}>
         <div className="bg-gray-300 w-full h-full"></div>
