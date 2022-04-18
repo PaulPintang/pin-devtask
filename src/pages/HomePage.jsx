@@ -13,7 +13,7 @@ const HomePage = () => {
         <div className="w-[280px] px-7">
           <Navbar />
         </div>
-        <div className="bg-gra y-50 h-full w-full border-t border-l border-gray-100 p-3">
+        <div className="bg-gray-50 bg-opacity-30 h-full w-full border-t border-l border-gray-100 p-3">
           <Outlet />
         </div>
       </div>
