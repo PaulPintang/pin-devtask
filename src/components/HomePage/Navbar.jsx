@@ -1,5 +1,14 @@
 import React from "react";
 import me from "../../assets/me.png";
+import { BiMessageRounded, BiGitRepoForked } from "react-icons/bi";
+import {
+  MdOutlineAutoGraph,
+  MdOutlineAddTask,
+  MdTimelapse,
+} from "react-icons/md";
+import { BsCardChecklist } from "react-icons/bs";
+import { VscTasklist } from "react-icons/vsc";
+// import
 const Navbar = () => {
   const members = [
     {
@@ -55,29 +64,137 @@ const Navbar = () => {
           </div>
           <div className="space-y-1">
             <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1">
-              <i class="fa-solid fa-list-check text-gray-400"></i>
+              <p className="text-gray-400 text-[10px]">REPOSITORY</p>
+            </div>
+            <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1">
+              <BiGitRepoForked className="text-gray-400" />
+              <p className="text-gray-700 text-[12.2px]">Components</p>
+            </div>
+          </div>
+          <div className="space-y-1">
+            <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1">
+              <p className="text-gray-400 text-[10px]">MENU</p>
+            </div>
+            <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1">
+              <VscTasklist className="text-gray-400" />
               <p className="text-gray-700 text-[12.2px]">Your Task</p>
             </div>
             <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1">
-              <i class="fa-regular fa-heart text-gray-400"></i>
+              <MdOutlineAutoGraph className="text-gray-400" />
               <p className="text-gray-700 text-[12.2px]">Performance</p>
             </div>
             <div className="flex items-center gap-3 w-full bg -gray-100 px-2 py-1">
-              <i class="fa-regular fa-message text-gray-400"></i>
+              <BiMessageRounded className="text-gray-400 text-lg" />
               <p className="text-gray-700 text-[12.2px]">Messages</p>
             </div>
 
             <div className="flex items-center gap-3 w-full bg -gray-100 px-2 py-1">
-              <i class="fa-light fa-clipboard-list text-gray-400"></i>
+              <MdOutlineAddTask className="text-gray-400" />
               <p className="text-gray-700 text-[12.2px]">QA'sToComply</p>
             </div>
             <div className="flex items-center gap-3 w-full bg -gray-100 px-2 py-1">
-              <i class="fa-regular fa-message text-gray-400"></i>
-              <p className="text-gray-700 text-[12.2px]">Task TimeSheets</p>
+              {/* <i class="fa-regular fa-message text-gray-400"></i> */}
+              <MdTimelapse className="text-gray-400 " />
+              <p className="text-gray-700 text-[12.2px]">TimeSheets</p>
             </div>
-            <div className="flex items-center gap-3 w-full bg -gray-100 px-2 py-1">
-              <i class="fa-regular fa-message text-gray-400"></i>
-              <p className="text-gray-700 text-[12.2px]">DTR</p>
+            <div className="flex items-center h-full gap-3 w-full bg -gray-100 px-2 py-1">
+              <BsCardChecklist className="text-gray-400 text-lg pb-1" />
+              <p className="text-gray-700 text-[12.2px]">Records</p>
+            </div>
+          </div>
+          <div className="space-y-1 ">
+            <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1">
+              <p className="text-gray-400 text-[10px]">MEMBERS</p>
+            </div>
+            <div className="h-[190px] overflow-y-scroll" id="scrollbar">
+              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1">
+                <div className="w-8 h-8">
+                  <img src={me} alt="" className="w-full" />
+                </div>
+                <p className="text-gray-500 text-xs font-semibold">
+                  Paul Justine Pintang
+                </p>
+              </div>
+              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1">
+                <div className="w-8 h-8">
+                  <img src={me} alt="" className="w-full" />
+                </div>
+                <p className="text-gray-500 text-xs font-semibold">
+                  Paul Justine Pintang
+                </p>
+              </div>
+              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1">
+                <div className="w-8 h-8">
+                  <img src={me} alt="" className="w-full" />
+                </div>
+                <p className="text-gray-500 text-xs font-semibold">
+                  Paul Justine Pintang
+                </p>
+              </div>
+              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1">
+                <div className="w-8 h-8">
+                  <img src={me} alt="" className="w-full" />
+                </div>
+                <p className="text-gray-500 text-xs font-semibold">
+                  Paul Justine Pintang
+                </p>
+              </div>
+              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1">
+                <div className="w-8 h-8">
+                  <img src={me} alt="" className="w-full" />
+                </div>
+                <p className="text-gray-500 text-xs font-semibold">
+                  Paul Justine Pintang
+                </p>
+              </div>
+              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1">
+                <div className="w-8 h-8">
+                  <img src={me} alt="" className="w-full" />
+                </div>
+                <p className="text-gray-500 text-xs font-semibold">
+                  Paul Justine Pintang
+                </p>
+              </div>
+              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1">
+                <div className="w-8 h-8">
+                  <img src={me} alt="" className="w-full" />
+                </div>
+                <p className="text-gray-500 text-xs font-semibold">
+                  Paul Justine Pintang
+                </p>
+              </div>
+              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1">
+                <div className="w-8 h-8">
+                  <img src={me} alt="" className="w-full" />
+                </div>
+                <p className="text-gray-500 text-xs font-semibold">
+                  Paul Justine Pintang
+                </p>
+              </div>
+              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1">
+                <div className="w-8 h-8">
+                  <img src={me} alt="" className="w-full" />
+                </div>
+                <p className="text-gray-500 text-xs font-semibold">
+                  Paul Justine Pintang
+                </p>
+              </div>
+              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1">
+                <div className="w-8 h-8">
+                  <img src={me} alt="" className="w-full" />
+                </div>
+                <p className="text-gray-500 text-xs font-semibold">
+                  Paul Justine Pintang
+                </p>
+              </div>
+              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1">
+                <div className="w-8 h-8">
+                  <img src={me} alt="" className="w-full" />
+                </div>
+                <p className="text-gray-500 text-xs font-semibold">
+                  Paul Justine Pintang
+                </p>
+              </div>
             </div>
           </div>
         </div>
