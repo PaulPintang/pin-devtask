@@ -1,5 +1,6 @@
 import React from "react";
 import me from "../../assets/me.png";
+import img1 from "../../assets/members/img1.png";
 
 import { Link } from "react-router-dom";
 import { BiMessageRounded, BiGitRepoForked } from "react-icons/bi";
@@ -39,8 +40,11 @@ const Navbar = () => {
             <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1">
               <p className="text-gray-400 text-[10px]">MENU</p>
             </div>
-            <Link to="/task" style={{ textDecoration: "none" }}>
-              <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-2 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
+            <Link to="/task">
+              <div
+                className="flex items-center gap-3 w-full bg- gray-100 px-2 py-2 hover:bg-gray-100 cursor-pointer transition-all rounded-md 
+                "
+              >
                 <VscTasklist className="text-gray-400" />
                 <p className="text-gray-700 text-[12.2px]">Your Task</p>
               </div>
@@ -81,11 +85,9 @@ const Navbar = () => {
                     <img src={me} alt="" className="w-full" />
                   </div>
                   <div className="flex flex-col">
-                    <p className="text-gray-500 text-[11px]">
-                      Maria Juana De Puta
-                    </p>
+                    <p className="text-gray-500 text-[11px]">Juan Dela Cruz</p>
                     <p className="text-gray-500 text-[9px] bg-gray-00 rounded">
-                      <span className="font-semibold text-gray-600">356</span>{" "}
+                      <span className="font-semibold text-gray-600">184</span>{" "}
                       hours pending
                     </p>
                   </div>
@@ -94,12 +96,14 @@ const Navbar = () => {
               <div className=" w-full bg- gray-100 px-2 py-1 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8">
-                    <img src={me} alt="" className="w-full" />
+                    <img src={img1} alt="" className="w-full" />
                   </div>
                   <div className="flex flex-col">
-                    <p className="text-gray-500 text-[11px]">Juan Dela Cruz</p>
+                    <p className="text-gray-500 text-[11px]">
+                      Maria Juana De Puta
+                    </p>
                     <p className="text-gray-500 text-[9px] bg-gray-00 rounded">
-                      <span className="font-semibold text-gray-600">184</span>{" "}
+                      <span className="font-semibold text-gray-600">356</span>{" "}
                       hours pending
                     </p>
                   </div>
