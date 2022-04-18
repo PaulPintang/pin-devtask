@@ -1,12 +1,13 @@
 import React from "react";
 import { Grid } from "@mantine/core";
+import Table from "./components/Table";
 const Dashboard = () => {
   return (
     <Grid grow className="h-full">
       <Grid.Col span={8}>
         <div className=" w-full h-full p-3">
           <div>
-            <p className="text-[13px] text-gray-400">Monday, April 18</p>
+            <p className="text-[12px] text-gray-400">Monday, April 18</p>
             <div className="flex flex-col">
               <p className="text-gray-700 text-2xl">Good Morning, Paul</p>
               <small className="text-gray-700 text-[11px]">
@@ -46,7 +47,7 @@ const Dashboard = () => {
                 </small>
               </div>
             </div>
-            <div className="w-full flex justify-between items-center gap-2">
+            {/* <div className="w-full flex justify-between items-center gap-2">
               <div className=" bg-opacity-60 rounded-md shadow-md w-full">
                 <div className="h-[110px] text-center">
                   <div className="h-full flex flex-col items-center justify-center">
@@ -79,7 +80,7 @@ const Dashboard = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </Grid.Col>
@@ -87,7 +88,9 @@ const Dashboard = () => {
         <div className="bg-gray-300 w-full h-full"></div>
       </Grid.Col>
       <Grid.Col span={8}>
-        <div className="bg-gray-300 w-full h-full"></div>
+        <div className="w-full h-full">
+          <Table />
+        </div>
       </Grid.Col>
       <Grid.Col span={4}>
         <div className="bg-gray-300 w-full h-full"></div>
