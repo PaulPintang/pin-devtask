@@ -4,11 +4,7 @@ import img1 from "../../assets/members/img1.png";
 
 import { Link } from "react-router-dom";
 import { BiMessageRounded, BiGitRepoForked } from "react-icons/bi";
-import {
-  MdSpaceDashboard,
-  MdTimelapse,
-  // MdDarkMode,
-} from "react-icons/md";
+import { MdSpaceDashboard, MdTimelapse } from "react-icons/md";
 import { VscTasklist } from "react-icons/vsc";
 const Navbar = () => {
   return (
