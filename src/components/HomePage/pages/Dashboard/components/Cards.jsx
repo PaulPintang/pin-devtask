@@ -2,6 +2,11 @@ import React from "react";
 import { FiStar } from "react-icons/fi";
 import { GiProgression } from "react-icons/gi";
 import { BiGitMerge } from "react-icons/bi";
+import {
+  MdOutlineMoreTime,
+  MdPendingActions,
+  MdOutlineCalendarToday,
+} from "react-icons/md";
 const Cards = () => {
   return (
     <div>
@@ -95,7 +100,7 @@ const Cards = () => {
               <div className="bg-yellow-300 w-8 h-1"></div>
               <div className="h-full flex items-center justify-between">
                 <div className="bg-gray-100 rounded-full p-2">
-                  <FiStar className="text-sm text-gray-400" />
+                  <MdOutlineMoreTime className="text-sm text-gray-400" />
                 </div>
                 <p className="text-[11px] text-gray-400">Total Hours</p>
                 <p className="text-[25px]">376</p>
@@ -107,7 +112,7 @@ const Cards = () => {
               <div className="bg-blue-300 w-8 h-1"></div>
               <div className="h-full flex items-center justify-between">
                 <div className="bg-gray-100 rounded-full p-2">
-                  <GiProgression className="text-sm text-gray-400" />
+                  <MdPendingActions className="text-sm text-gray-400" />
                 </div>
                 <p className="text-[11px] text-gray-400">Total Pending</p>
                 <p className="text-[25px]">110</p>
@@ -119,7 +124,7 @@ const Cards = () => {
               <div className="bg-green-300 w-8 h-1"></div>
               <div className="h-full flex items-center justify-between">
                 <div className="bg-gray-100 rounded-full p-2">
-                  <BiGitMerge className="text-sm text-gray-400" />
+                  <MdOutlineCalendarToday className="text-sm text-gray-400" />
                 </div>
                 <p className="text-[11px] text-gray-400">Total Today</p>
                 <p className="text-[25px]">08</p>
