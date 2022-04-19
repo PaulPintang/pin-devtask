@@ -3,6 +3,7 @@ import { Grid } from "@mantine/core";
 import Cards from "./components/Cards";
 import Table from "./components/Table";
 import Performance from "./components/Performance";
+import Todos from "./components/Todos";
 const Dashboard = () => {
   return (
     <Grid justify="space-between" className="h-full ">
@@ -11,8 +12,8 @@ const Dashboard = () => {
           <Cards />
         </div>
       </Grid.Col>
-      <Grid.Col span={4}>
-        <div className="w-full h-full">
+      <Grid.Col span={4} className="h-2/4">
+        <div className="w-full h-full pr-3">
           <Performance />
         </div>
       </Grid.Col>
@@ -22,7 +23,9 @@ const Dashboard = () => {
         </div>
       </Grid.Col>
       <Grid.Col span={4}>
-        <div className="bg-gray-300 w-full h-full"></div>
+        <div className=" w-full h-full">
+          <Todos />
+        </div>
       </Grid.Col>
     </Grid>
   );
