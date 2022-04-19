@@ -5,7 +5,6 @@ import img1 from "../../assets/members/img1.png";
 import { Link } from "react-router-dom";
 import { BiMessageRounded, BiGitRepoForked } from "react-icons/bi";
 import {
-  MdOutlineAutoGraph,
   MdSpaceDashboard,
   MdTimelapse,
   // MdDarkMode,
