@@ -4,6 +4,7 @@ import { FiStar } from "react-icons/fi";
 import { GiProgression } from "react-icons/gi";
 import { BiGitMerge } from "react-icons/bi";
 import Table from "./components/Table";
+import Performance from "./components/Performance";
 const Dashboard = () => {
   return (
     <Grid justify="space-between" className="h-full">
@@ -97,10 +98,12 @@ const Dashboard = () => {
         </div>
       </Grid.Col>
       <Grid.Col span={4}>
-        <div className="bg-gray-300 w-full h-full"></div>
+        <div className="w-full h-full">
+          <Performance />
+        </div>
       </Grid.Col>
       <Grid.Col span={8} className="h-2/4">
-        <div className="w-full h-full">
+        <div className="w-full h-full p-3">
           <Table />
         </div>
       </Grid.Col>

@@ -11,7 +11,6 @@ import HomePage from "./pages/HomePage";
 import Dashboard from "./components/HomePage/pages/Dashboard";
 import Task from "./components/HomePage/pages/Task";
 import Timesheet from "./components/HomePage/pages/TimeSheet";
-import Performance from "./components/HomePage/pages/Performance";
 
 function App() {
   return (
@@ -24,7 +23,6 @@ function App() {
           <Route path="/" element={<Dashboard />} />
           <Route path="/task" element={<Task />} />
           <Route path="/timesheet" element={<Timesheet />} />
-          <Route path="/performance" element={<Performance />} />
         </Route>
       </Routes>
     </MantineProvider>
