@@ -23,7 +23,7 @@ const Dashboard = () => {
         </div>
       </Grid.Col>
       <Grid.Col span={4} className="h-2/4">
-        <div className=" w-full h-full">
+        <div className=" w-full h-full pr-3">
           <Todos />
         </div>
       </Grid.Col>

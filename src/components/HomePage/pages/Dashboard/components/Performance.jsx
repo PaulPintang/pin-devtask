@@ -2,7 +2,7 @@ import React from "react";
 
 const Performance = () => {
   return (
-    <div className="p-2 shadow-md rounded-md">
+    <div className="p-4 shadow-md rounded-md h-full">
       <div className="space-y-2 ">
         <small className="text-gray-800 font-semibold uppercase text-[12px]">
           Pixel8 Web Solutions & Consultancy Inc

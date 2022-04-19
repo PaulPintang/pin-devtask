@@ -10,7 +10,7 @@ const Table = () => {
           <div>
             <p className="text-gray-700">All Tasks</p>
           </div>
-          <div className="relative">
+          <div className="relative cursor-pointer">
             <div
               className="flex items-center gap-2 "
               onClick={() => setShowFilter(!showFilter)}

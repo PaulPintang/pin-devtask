@@ -4,7 +4,7 @@ import { Button } from "@mantine/core";
 import { MdAdd } from "react-icons/md";
 const Todos = () => {
   return (
-    <div className="p-4 shadow-md rounded-md h-full  ">
+    <div className="p-4 shadow-md rounded-md h-full ">
       <div className="h-full w-full p-2 flex flex-col justify-center items-center  border-dashed border border-gray-200 rounded-md">
         <div className="w-[140px]">
           <img src={todo} alt="" />
