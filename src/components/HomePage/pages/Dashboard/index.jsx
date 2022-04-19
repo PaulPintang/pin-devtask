@@ -7,8 +7,8 @@ import Table from "./components/Table";
 import Performance from "./components/Performance";
 const Dashboard = () => {
   return (
-    <Grid justify="space-between" className="h-full">
-      <Grid.Col span={8} className="h-2/4">
+    <Grid justify="space-between" className="h-full ">
+      <Grid.Col span={8} className="h-2/4 ">
         <div className=" w-full h-full p-3">
           <div>
             <p className="text-[12px] text-gray-400">Monday, April 18</p>
@@ -90,6 +90,44 @@ const Dashboard = () => {
                     </div>
                     <p className="text-[11px] text-gray-400">For QA</p>
                     <p className="text-[25px]">03</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="w-full flex justify-between items-center gap-2">
+              <div className=" bg-opacity-60 rounded-md shadow-md w-full">
+                <div className="h-[80px] text-center p-4">
+                  <div className="bg-yellow-300 w-8 h-1"></div>
+                  <div className="h-full flex items-center justify-between">
+                    <div className="bg-gray-100 rounded-full p-2">
+                      <FiStar className="text-sm text-gray-400" />
+                    </div>
+                    <p className="text-[11px] text-gray-400">Total Hours</p>
+                    <p className="text-[25px]">376</p>
+                  </div>
+                </div>
+              </div>
+              <div className=" bg-opacity-60 rounded-md shadow-md w-full">
+                <div className="h-[80px] text-center p-4">
+                  <div className="bg-blue-300 w-8 h-1"></div>
+                  <div className="h-full flex items-center justify-between">
+                    <div className="bg-gray-100 rounded-full p-2">
+                      <GiProgression className="text-sm text-gray-400" />
+                    </div>
+                    <p className="text-[11px] text-gray-400">Total Pending</p>
+                    <p className="text-[25px]">110</p>
+                  </div>
+                </div>
+              </div>
+              <div className=" bg-opacity-60 rounded-md shadow-md w-full">
+                <div className="h-[80px] text-center p-4">
+                  <div className="bg-green-300 w-8 h-1"></div>
+                  <div className="h-full flex items-center justify-between">
+                    <div className="bg-gray-100 rounded-full p-2">
+                      <BiGitMerge className="text-sm text-gray-400" />
+                    </div>
+                    <p className="text-[11px] text-gray-400">Total Today</p>
+                    <p className="text-[25px]">08</p>
                   </div>
                 </div>
               </div>

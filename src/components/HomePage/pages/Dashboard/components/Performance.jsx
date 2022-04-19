@@ -1,7 +1,7 @@
 import React from "react";
 const Performance = () => {
   return (
-    <div className="p-2">
+    <div className="p-2 ">
       <div className="space-y-2">
         <small className="text-gray-800 font-semibold uppercase text-[12px]">
           Pixel8 Web Solutions & Consultancy Inc
@@ -33,7 +33,7 @@ const Performance = () => {
           <small className="text-gray-600">486 hours</small>
         </div>
       </div>
-      <div className="py-3">
+      {/* <div className="py-3">
         <p>Daily Performance Stats</p>
         <div className="py-1 mt-2 bg-opacity-60 rounded-md shadow-sm w-full">
           <div className="h-[80px] text-center p-4">
@@ -41,19 +41,22 @@ const Performance = () => {
               <div>
                 <p className="text-[25px]">376</p>
                 <span className="text-[11px] text-gray-400">Total Hours</span>
+                <div className="w-6 mx-auto h-1 bg-yellow-300"></div>
               </div>
               <div>
                 <p className="text-[25px]">110</p>
                 <span className="text-[11px] text-gray-400">Total Pending</span>
+                <div className="w-6 mx-auto h-1 bg-blue-300"></div>
               </div>
               <div>
                 <p className="text-[25px]">08</p>
                 <span className="text-[11px] text-gray-400">Total Today</span>
+                <div className="w-6 mx-auto h-1 bg-green-300"></div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
