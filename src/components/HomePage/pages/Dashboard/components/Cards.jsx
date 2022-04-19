@@ -132,11 +132,11 @@ const Cards = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-end py-2">
+        {/* <div className="flex justify-end py-2">
           <small className="text-[10px] text-gray-400 text-center">
             as of April 18, 11:00 AM
           </small>
-        </div>
+        </div> */}
       </div>
     </div>
   );
