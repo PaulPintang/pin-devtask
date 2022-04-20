@@ -43,9 +43,9 @@ const Task = () => {
           </div>
         </div>
       </div>
-      <Grid>
+      <Grid className="h-[calc(100vh-180px)] bg-slate-200 overflow-y-scroll">
         <Grid.Col span={3}>
-          <div className="pb-2">
+          <div className="pb-2 sticky top-0">
             <small className="text-gray-400  text-[10px] uppercase font-semibold">
               New Task
             </small>
