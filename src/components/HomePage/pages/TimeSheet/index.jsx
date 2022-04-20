@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 import { Grid, Input } from "@mantine/core";
-import { TimeInput } from "@mantine/dates";
+import { TimeInput, DatePicker } from "@mantine/dates";
 const Timesheet = () => {
   const [expand, setExpand] = useState(false);
 
@@ -129,7 +129,7 @@ const Timesheet = () => {
         </Grid.Col>
 
         <Grid.Col span={4} className="h-2/4">
-          <div className="w-full h-full pr-3 shadow-md rounded-md">
+          <div className="w-full h-full p-2 shadow-md rounded-md">
             <div className="p-3">
               <p className="text-gray-700">FE | OKR Card Component </p>
               <span className="text-[11px] text-gray-400 ">
@@ -139,10 +139,16 @@ const Timesheet = () => {
                 <Input placeholder="Ticket Number" size="xs" />
                 <div>
                   <p>Start Date Time</p>
-                  <div className="flex gap-2">
-                    <Input placeholder="Ticket Number" size="xs" />
+                  <div className="flex justify-between gap-2">
+                    <DatePicker
+                      placeholder="Pick date"
+                      inputFormat="MM/DD/YYYY"
+                      labelFormat="MM/YYYY"
+                      defaultValue={new Date()}
+                    />
                     <TimeInput
-                      label="Pick time"
+                      className="w-2/4"
+                      size="xs"
                       format="12"
                       defaultValue={new Date()}
                     />
