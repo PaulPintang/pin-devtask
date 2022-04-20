@@ -137,7 +137,7 @@ const Timesheet = () => {
         <Grid.Col span={4}>
           <div className="w-full h-full p-2 shadow-md rounded-md">
             <div className="p-3">
-              <p className="text-gray-700">FE | OKR Card Component </p>
+              <p className="text-gray-700">What need's to be done today ?</p>
               <span className="text-[11px] text-gray-400 ">
                 Note: Task here is based on your on-progress task
               </span>

@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 const Performance = () => {
-  const [now] = useState(Date().toLocaleString());
   return (
     <div className="p-4 shadow-md rounded-md h-full space-y-3 relative">
       <div className="space-y-2 ">
@@ -13,19 +12,19 @@ const Performance = () => {
 
         <div className="space-y-1 pl-5">
           <div className="flex gap-2 items-center text-[13px] ">
-            <small className="font-semibold text-gray-700 uppercase">
+            <small className="font-semibold text-gray-500 uppercase">
               Department:
             </small>
             <small className="text-gray-500">Software Development</small>
           </div>
           <div className="flex gap-2 items-center text-[13px] ">
-            <small className="font-semibold text-gray-700 uppercase">
+            <small className="font-semibold text-gray-500 uppercase">
               Intern:
             </small>
             <small className="text-gray-500">Paul Justine Pintang</small>
           </div>
           <div className="flex gap-2 items-center text-[13px] ">
-            <small className="font-semibold text-gray-700 uppercase">
+            <small className="font-semibold text-gray-500 uppercase">
               School:
             </small>
             <small className="text-gray-500">
@@ -33,13 +32,13 @@ const Performance = () => {
             </small>
           </div>
           <div className="flex gap-2 items-center text-[13px] ">
-            <small className="font-semibold text-gray-700 uppercase">
+            <small className="font-semibold text-gray-500 uppercase">
               OJT Required Hours:
             </small>
             <small className="text-gray-500">486 hours</small>
           </div>
           <div className="flex gap-2 items-center text-[13px] ">
-            <small className="font-semibold text-gray-700 uppercase">
+            <small className="font-semibold text-gray-500 uppercase">
               Started:
             </small>
             <small className="text-gray-500">February 17, 2022</small>
@@ -55,19 +54,19 @@ const Performance = () => {
         </div>
         <div className="space-y-1 pl-5">
           <div className="flex gap-2 items-center text-[13px] ">
-            <small className="font-semibold text-gray-700 uppercase">
+            <small className="font-semibold text-gray-500 uppercase">
               No. of Tasks Today:
             </small>
             <small className="text-gray-500">01</small>
           </div>
           <div className="flex gap-2 items-center text-[13px] ">
-            <small className="font-semibold text-gray-700 uppercase">
+            <small className="font-semibold text-gray-500 uppercase">
               Total Hours in Timesheets:
             </small>
             <small className="text-gray-500">08 hours</small>
           </div>
           <div className="flex gap-2 items-center text-[13px] ">
-            <small className="font-semibold text-gray-700 uppercase">
+            <small className="font-semibold text-gray-500 uppercase">
               Total Pending:
             </small>
             <small className="text-gray-500">110 hours</small>
@@ -76,10 +75,8 @@ const Performance = () => {
       </div>
       <div className="flex gap-2 items-center text-[13px] ">
         <div className="w-1 h-3 bg-green-300"></div>
-        <small className="font-semibold text-gray-700 uppercase">Today:</small>
-        <small className="text-gray-500 max-w-[80px] overflow-hidden whitespace-nowrap ">
-          {now}
-        </small>
+        <small className="font-semibold text-gray-800 uppercase">Today:</small>
+        <small className="text-gray-500 ">Monday, April 18</small>
       </div>
     </div>
   );
