@@ -28,8 +28,8 @@ const Timesheet = () => {
         </div>
       </div>
       <Grid grow gutter="sm" className="h-[calc(100vh-190px)]">
-        <Grid.Col span={8} className="h-full">
-          <div className="bg-white shadow-md dark:bg-gray-800 mb-8 rounded-md p-2 h">
+        <Grid.Col span={8}>
+          <div className="h-full w-full bg-white shadow-md dark:bg-gray-800 mb-8 rounded-md p-2 h">
             <table className="min-w-full  border-collapse w-full border-none">
               <thead className="sticky top-0 z-30  dark:bg-[#2D3746]">
                 <tr>
@@ -128,16 +128,35 @@ const Timesheet = () => {
           </div>
         </Grid.Col>
 
-        <Grid.Col span={4} className="">
+        <Grid.Col span={4}>
           <div className="w-full h-full p-2 shadow-md rounded-md">
             <div className="p-3">
               <p className="text-gray-700">FE | OKR Card Component </p>
               <span className="text-[11px] text-gray-400 ">
                 Note: Task here is based on your on-progress task
               </span>
-              <div>
-                <Input placeholder="Ticket Number" size="xs" />
-                <div className="py-2 space-y-1">
+              <div className="py-3">
+                <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                  <div className="bg-yellow-300 w-2 h-2"></div>
+                  <p className=" uppercase font-semibold">Spent:</p>
+                  <span>4hrs</span>
+                </div>
+              </div>
+
+              <div className="py-2 space-y-3">
+                <div className="space-y-1">
+                  <p className="text-[10px] text-gray-400 uppercase font-semibold">
+                    Task name
+                  </p>
+                  <Input placeholder="Task name" size="xs" />
+                </div>
+                <div className="space-y-1">
+                  <p className="text-[10px] text-gray-400 uppercase font-semibold">
+                    Ticket No.
+                  </p>
+                  <Input placeholder="Ticket number" size="xs" />
+                </div>
+                <div className="space-y-1">
                   <p className="text-[10px] text-gray-400 uppercase font-semibold">
                     Start Date Time
                   </p>
@@ -158,9 +177,7 @@ const Timesheet = () => {
                     />
                   </div>
                 </div>
-              </div>
-              <div>
-                <div className="py-2 space-y-1">
+                <div className="space-y-1">
                   <p className="text-[10px] text-gray-400 uppercase font-semibold">
                     End Date Time
                   </p>
@@ -176,6 +193,7 @@ const Timesheet = () => {
                   </div>
                 </div>
               </div>
+
               <Button mt={3} color="indigo" fullWidth>
                 Start the task
               </Button>
