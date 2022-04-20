@@ -176,7 +176,7 @@ const Timesheet = () => {
                   </div>
                 </div>
               </div>
-              <Button mt={3} fullWidth>
+              <Button mt={3} color="indigo" fullWidth>
                 Start the task
               </Button>
             </div>
