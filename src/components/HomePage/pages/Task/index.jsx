@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid } from "@mantine/core";
+import { Grid, Badge } from "@mantine/core";
 const Task = () => {
   return (
     <div className="p-3">
@@ -72,6 +72,26 @@ const Task = () => {
                 </div>
               </div>
             </div>
+            <div className=" bg-opacity-60 rounded-md shadow-md w-full cursor-pointer hover:-translate-y-0.5 transition-all">
+              <div className="p-4 space-y-2">
+                <div className="bg-indigo-300 w-8 h-1"></div>
+                <div>
+                  <p className="text-[13px] ">FE | Store Voucher Page </p>
+                  <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                    <p>Ticket:</p>
+                    <span>0903000000001598</span>
+                  </div>
+                  <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                    <p>Added:</p>
+                    <span>April 20, 11:50 AM</span>
+                  </div>
+                  <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                    <p>Deliverable Link:</p>
+                    <span className="text-blue-400 font-semibold">View</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </Grid.Col>
         <Grid.Col span={3}>
@@ -80,8 +100,43 @@ const Task = () => {
               In-Progress
             </small>
           </div>
-
-          <div className="flex flex-col gap-3"></div>
+          <div className="flex flex-col gap-3">
+            <div className=" bg-opacity-60 rounded-md shadow-md w-full cursor-pointer hover:-translate-y-0.5 transition-all">
+              <div className="p-4 space-y-2">
+                <div className="bg-blue-300 w-8 h-1"></div>
+                <div>
+                  <p className="text-[13px] ">FE | Store Voucher Page </p>
+                  <div className="py-1 flex gap-2">
+                    <Badge variant="filled" color="teal" size="xs">
+                      front-end
+                    </Badge>
+                    <Badge variant="light" color="indigo" size="xs">
+                      backend
+                    </Badge>
+                    <Badge variant="light" color="red" size="xs">
+                      for qa
+                    </Badge>
+                  </div>
+                  <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                    <p>Ticket:</p>
+                    <span>0903000000001598</span>
+                  </div>
+                  <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                    <p>Added:</p>
+                    <span>April 20, 11:50 AM</span>
+                  </div>
+                  <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                    <p>Started:</p>
+                    <span>April 20, 12:00 PM</span>
+                  </div>
+                  <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                    <p>Deliverable Link:</p>
+                    <span className="text-blue-400 font-semibold">View</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </Grid.Col>
         <Grid.Col span={3}>
           <div className="pb-2">
