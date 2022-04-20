@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
-import { Grid, Input } from "@mantine/core";
+import { Grid, Input, Button } from "@mantine/core";
 import { TimeInput, DatePicker } from "@mantine/dates";
 const Timesheet = () => {
   const [expand, setExpand] = useState(false);
@@ -137,24 +137,48 @@ const Timesheet = () => {
               </span>
               <div>
                 <Input placeholder="Ticket Number" size="xs" />
-                <div>
-                  <p>Start Date Time</p>
+                <div className="py-2 space-y-1">
+                  <p className="text-[10px] text-gray-400 uppercase font-semibold">
+                    Start Date Time
+                  </p>
                   <div className="flex justify-between gap-2">
                     <DatePicker
+                      className="w-2/4"
+                      size="xs"
                       placeholder="Pick date"
-                      inputFormat="MM/DD/YYYY"
-                      labelFormat="MM/YYYY"
                       defaultValue={new Date()}
+                      disabled
                     />
                     <TimeInput
                       className="w-2/4"
                       size="xs"
                       format="12"
                       defaultValue={new Date()}
+                      disabled
                     />
                   </div>
                 </div>
               </div>
+              <div>
+                <div className="py-2 space-y-1">
+                  <p className="text-[10px] text-gray-400 uppercase font-semibold">
+                    End Date Time
+                  </p>
+                  <div className="flex justify-between gap-2">
+                    <DatePicker
+                      className="w-2/4"
+                      size="xs"
+                      placeholder="Pick date"
+                      defaultValue={new Date()}
+                      disabled
+                    />
+                    <TimeInput className="w-2/4" size="xs" format="12" />
+                  </div>
+                </div>
+              </div>
+              <Button mt={3} fullWidth>
+                Start the task
+              </Button>
             </div>
           </div>
         </Grid.Col>
