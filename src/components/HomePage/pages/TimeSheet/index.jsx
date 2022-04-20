@@ -51,19 +51,6 @@ const Timesheet = () => {
                   >
                     Ticket No.
                   </th>
-                  {/* <th
-                    scope="col"
-                    className="hidden md:table-cell lg:table-cell  py-3 text-left text-[9px] font-[600] text-gray-400 dark:text-gray-50  tracking-wider bg-gray-100 dark:bg-gray-700 dark:bg-opacity-60 shadow-sm"
-                  >
-                    Start Date Time
-                  </th>
-                  <th
-                    scope="col"
-                    className="hidden md:table-cell lg:table-cell px-5 py-3 text-left text-[9px] font-[600] text-gray-400 dark:text-gray-50  tracking-wider bg-gray-100 dark:bg-gray-700 dark:bg-opacity-60 shadow-sm"
-                  >
-                    End Date Time
-                  </th> */}
-
                   <th
                     scope="col"
                     className=" hidden md:table-cell lg:table-cell py-3 text-left text-[9px] font-[600] text-gray-400 dark:text-gray-50  tracking-wider bg-gray-100 dark:bg-gray-700 dark:bg-opacity-60 shadow-sm"
@@ -90,7 +77,7 @@ const Timesheet = () => {
                   </th>
                 </tr>
               </thead>
-              <tbody className="text-[11px] divide-y divide-gray-100 overflow-auto text-gray-600">
+              <tbody className="text-[11px] divide-y divide-gray-100 overflow-auto text-gray-600 relative">
                 <tr className="border-none ">
                   <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell pl-3">
                     FE | BE | Todo App
@@ -105,26 +92,81 @@ const Timesheet = () => {
                     <div className="flex bg-gray-100 rounded items-center max-w-max px-2 py-1 gap-2">
                       <div className="w-2 h-2 bg-green-300 "></div>
                       <span className=" text-green-500   text-[9px]">
-                        Recorded
+                        Recording
                       </span>
                     </div>
                   </td>
-                  <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
+                  <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell ">
                     <div className="text-gray-500 pr-2">
                       <span className="text-[9px] text-blue-400 font-semibold">
                         UPDATE
                       </span>
                     </div>
                   </td>
-                  <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
+                  <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell ">
                     <div
                       className="cursor-pointer"
                       onClick={() => setExpand(!expand)}
                     >
                       {expand ? (
-                        <IoMdArrowDropdown className="text-lg" />
-                      ) : (
                         <IoMdArrowDropup className="text-lg" />
+                      ) : (
+                        <div>
+                          <IoMdArrowDropdown className="text-lg" />
+                          <div className="absolute right-0">
+                            <div className="shadow-md rounded-md">
+                              <div className="p-3">
+                                <div className="py-2">
+                                  <div className=" text-[10px] text-gray-500">
+                                    <div className="flex gap-2 items-center">
+                                      <div className="bg-yellow-300 w-2 h-2"></div>
+                                      <p className=" uppercase font-semibold">
+                                        Start Date Time:
+                                      </p>
+                                    </div>
+                                    <span>April 20, 2022 | 08:00 AM</span>
+                                  </div>
+                                  <div className=" text-[10px] text-gray-500">
+                                    <div className="flex gap-2 items-center">
+                                      <div className="bg-yellow-300 w-2 h-2"></div>
+                                      <p className=" uppercase font-semibold">
+                                        End Date Time:
+                                      </p>
+                                    </div>
+                                    <span>April 20, 2022 | 08:00 AM</span>
+                                  </div>
+                                </div>
+                                {/* <div className="py-2">
+                                  <div className=" text-[10px] text-gray-500">
+                                    <div className="flex gap-2 items-center">
+                                      <div className="bg-indigo-300 w-2 h-2"></div>
+                                      <p className=" uppercase font-semibold">
+                                        Start Date Time:
+                                      </p>
+                                    </div>
+                                    <span>April 20, 2022 | 08:00 AM</span>
+                                  </div>
+                                  <div className=" text-[10px] text-gray-500">
+                                    <div className="flex gap-2 items-center">
+                                      <div className="bg-indigo-300 w-2 h-2"></div>
+                                      <p className=" uppercase font-semibold">
+                                        End Date Time:
+                                      </p>
+                                    </div>
+                                    <span>April 20, 2022 | 08:00 AM</span>
+                                  </div>
+                                </div> */}
+                                <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                                  <div className="bg-green-300 w-2 h-2"></div>
+                                  <p className=" uppercase font-semibold">
+                                    Recorded:
+                                  </p>
+                                  <span>8hrs</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       )}
                     </div>
                   </td>
