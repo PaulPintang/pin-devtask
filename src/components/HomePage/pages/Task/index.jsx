@@ -180,6 +180,10 @@ const Task = () => {
                       <p>Deliverable Link:</p>
                       <span className="text-blue-400 font-semibold">View</span>
                     </div>
+                    <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                      <p>QA Personnel:</p>
+                      <span>Juan Dela Cruz</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -214,6 +218,10 @@ const Task = () => {
                     <div className="flex gap-2 items-center text-[10px] text-gray-500">
                       <p>Deliverable Link:</p>
                       <span className="text-blue-400 font-semibold">View</span>
+                    </div>
+                    <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                      <p>QA Personnel:</p>
+                      <span>Juan Dela Cruz</span>
                     </div>
                   </div>
                 </div>
@@ -259,6 +267,10 @@ const Task = () => {
                           View
                         </span>
                       </div>
+                      <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                        <p>QA Personnel:</p>
+                        <span>Juan Dela Cruz</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -289,6 +301,10 @@ const Task = () => {
                         <span className="text-blue-400 font-semibold">
                           View
                         </span>
+                      </div>
+                      <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                        <p>QA Personnel:</p>
+                        <span>Juan Dela Cruz</span>
                       </div>
                     </div>
                   </div>
