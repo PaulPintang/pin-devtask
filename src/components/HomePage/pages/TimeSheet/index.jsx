@@ -27,8 +27,8 @@ const Timesheet = () => {
           </div>
         </div>
       </div>
-      <Grid grow gutter="sm" className="h-full ">
-        <Grid.Col span={8} className="h-2/4 ">
+      <Grid grow gutter="sm" className="h-[calc(100vh-190px)]">
+        <Grid.Col span={8} className="h-full">
           <div className="bg-white shadow-md dark:bg-gray-800 mb-8 rounded-md p-2 h">
             <table className="min-w-full  border-collapse w-full border-none">
               <thead className="sticky top-0 z-30  dark:bg-[#2D3746]">
@@ -128,7 +128,7 @@ const Timesheet = () => {
           </div>
         </Grid.Col>
 
-        <Grid.Col span={4} className="h-2/4">
+        <Grid.Col span={4} className="">
           <div className="w-full h-full p-2 shadow-md rounded-md">
             <div className="p-3">
               <p className="text-gray-700">FE | OKR Card Component </p>
