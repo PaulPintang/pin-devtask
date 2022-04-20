@@ -25,6 +25,12 @@ const Timesheet = () => {
               PM
             </small>
           </div>
+          <div className="flex gap-3 items-center">
+            <div className="bg-green-300 w-2 h-2"></div>
+            <small className="text-gray-400  text-[10px] uppercase font-semibold ">
+              Recorded
+            </small>
+          </div>
         </div>
       </div>
       <Grid grow gutter="sm" className="h-[calc(100vh-190px)]">
@@ -140,6 +146,16 @@ const Timesheet = () => {
                   <div className="bg-yellow-300 w-2 h-2"></div>
                   <p className=" uppercase font-semibold">Spent:</p>
                   <span>4hrs</span>
+                </div>
+                <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                  <div className="bg-indigo-300 w-2 h-2"></div>
+                  <p className=" uppercase font-semibold">Spent:</p>
+                  <span>4hrs</span>
+                </div>
+                <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                  <div className="bg-green-300 w-2 h-2"></div>
+                  <p className=" uppercase font-semibold">Recorded:</p>
+                  <span>8hrs</span>
                 </div>
               </div>
 
