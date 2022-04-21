@@ -1,7 +1,7 @@
 import React from "react";
 const Performance = () => {
   return (
-    <div className="p-4 shadow-md rounded-md h-full space-y-3 relative">
+    <div className="bg-white p-4 shadow-md rounded-md h-full space-y-3 relative">
       <div className="space-y-2 ">
         <div className="flex items-center gap-2">
           <div className="w-1 h-3 bg-blue-300"></div>
