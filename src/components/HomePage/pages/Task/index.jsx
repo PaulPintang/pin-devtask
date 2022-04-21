@@ -121,12 +121,6 @@ const Task = () => {
                     <Badge variant="filled" color="teal" size="xs">
                       front-end
                     </Badge>
-                    <Badge variant="light" color="indigo" size="xs">
-                      backend
-                    </Badge>
-                    <Badge variant="light" color="red" size="xs">
-                      for qa
-                    </Badge>
                   </div>
                   <div className="flex gap-2 items-center text-[10px] text-gray-500">
                     <p>Ticket:</p>
@@ -162,11 +156,8 @@ const Task = () => {
                 <div className="p-4 space-y-2">
                   <div className="bg-red-300 w-8 h-1"></div>
                   <div>
-                    <p className="text-[13px] ">FE | Store Voucher Page </p>
+                    <p className="text-[13px] ">BE | Store Voucher</p>
                     <div className="py-1 flex gap-2">
-                      <Badge variant="light" color="teal" size="xs">
-                        front-end
-                      </Badge>
                       <Badge variant="light" color="indigo" size="xs">
                         backend
                       </Badge>
@@ -209,9 +200,6 @@ const Task = () => {
                     <div className="py-1 flex gap-2">
                       <Badge variant="light" color="teal" size="xs">
                         front-end
-                      </Badge>
-                      <Badge variant="light" color="indigo" size="xs">
-                        backend
                       </Badge>
                       <Badge variant="filled" color="red" size="xs">
                         for qa
