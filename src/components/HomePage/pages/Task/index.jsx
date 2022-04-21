@@ -54,10 +54,7 @@ const Task = () => {
             </small>
           </div>
           <div className="flex flex-col gap-3">
-            <div
-              onClick={() => setOpened(true)}
-              className=" bg-opacity-60 rounded-md shadow-md w-full cursor-pointer hover:-translate-y-0.5 transition-all"
-            >
+            <div className=" bg-opacity-60 rounded-md shadow-md w-full hover:-translate-y-0.5 transition-all">
               <div className="p-4 space-y-2">
                 <div className="bg-indigo-300 w-8 h-1"></div>
                 <div>
@@ -80,7 +77,7 @@ const Task = () => {
                 </div>
               </div>
             </div>
-            <div className=" bg-opacity-60 rounded-md shadow-md w-full cursor-pointer hover:-translate-y-0.5 transition-all">
+            <div className=" bg-opacity-60 rounded-md shadow-md w-full  hover:-translate-y-0.5 transition-all">
               <div className="p-4 space-y-2">
                 <div className="bg-indigo-300 w-8 h-1"></div>
                 <div>
@@ -112,7 +109,10 @@ const Task = () => {
             </small>
           </div>
           <div className="flex flex-col gap-3">
-            <div className=" bg-opacity-60 rounded-md shadow-md w-full cursor-pointer hover:-translate-y-0.5 transition-all">
+            <div
+              onClick={() => setOpened(true)}
+              className=" bg-opacity-60 rounded-md shadow-md w-full cursor-pointer hover:-translate-y-0.5 transition-all"
+            >
               <div className="p-4 space-y-2">
                 <div className="bg-blue-300 w-8 h-1"></div>
                 <div>
@@ -342,7 +342,7 @@ const Task = () => {
       </Grid>
 
       {/* ModalView */}
-      {/* <div>
+      <div>
         <Modal
           opened={opened}
           onClose={() => setOpened(false)}
@@ -371,10 +371,13 @@ const Task = () => {
             </div>
             <div className="space-y-3 pl-3">
               <div>
+                <p className="text-gray-700 text-[14px]">
+                  Thursday, April 21, 2022
+                </p>
                 <div className="flex gap-2 items-center text-[12px] text-gray-500">
                   <div className="bg-yellow-300 w-2 h-2"></div>
                   <p className=" uppercase font-semibold">Spent:</p>
-                  <span>0</span>
+                  <span>4</span>
                 </div>
                 <div className="flex gap-2 items-center text-[12px] text-gray-500">
                   <div className="bg-indigo-300 w-2 h-2"></div>
@@ -384,7 +387,7 @@ const Task = () => {
                 <div className="flex gap-2 items-center text-[12px] text-gray-500">
                   <div className="bg-green-300 w-2 h-2"></div>
                   <p className=" uppercase font-semibold">Recorded:</p>
-                  <span>0</span>
+                  <span>4</span>
                 </div>
               </div>
               <div>
@@ -398,18 +401,25 @@ const Task = () => {
                     <span>April 20, 11:50 AM</span>
                   </div>
                   <div className="flex gap-2 items-center text-[13px] text-gray-500">
+                    <p>Started:</p>
+                    <span>April 23, 08:50 AM</span>
+                  </div>
+
+                  <div className="flex gap-2 items-center text-[13px] text-gray-500">
                     <p>Deliverable Link:</p>
                     <span className="text-blue-400 font-semibold">View</span>
                   </div>
                 </div>
               </div>
-              <Button mt={3} color="indigo">
-                Start the task
-              </Button>
+            </div>
+            <div className="pt-3 flex gap-2 items-center text-[12px] text-gray-500">
+              <div className="bg-green-300 w-2 h-2"></div>
+              <p className=" uppercase font-semibold">Total Spent Recorded:</p>
+              <span>23 hours</span>
             </div>
           </div>
         </Modal>
-      </div> */}
+      </div>
     </div>
   );
 };
