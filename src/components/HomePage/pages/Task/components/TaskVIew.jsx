@@ -11,33 +11,15 @@ const TaskView = () => {
         <div className="pt-3">
           <div className="flex flex-col md:flex-row lg:flex-row lg:justify-start lg:items-center gap-2 md:gap-4 lg:gap-4 pb-3">
             <div className="flex gap-3 items-center">
-              <div className="bg-yellow-300 w-2 h-2"></div>
+              <div className="bg-green-300 w-2 h-2"></div>
               <small className="text-gray-400  text-[10px] uppercase font-semibold ">
-                All
+                Frontend
               </small>
             </div>
             <div className="flex gap-3 items-center">
               <div className="bg-indigo-300 w-2 h-2"></div>
               <small className="text-gray-400  text-[10px] uppercase font-semibold ">
-                New
-              </small>
-            </div>
-            <div className="flex gap-3 items-center">
-              <div className="w-2 h-2 bg-blue-300"></div>
-              <small className="text-gray-400  text-[10px] uppercase font-semibold ">
-                In-Progress
-              </small>
-            </div>
-            <div className="flex gap-3 items-center">
-              <div className="bg-green-300 w-2 h-2"></div>
-              <small className="text-gray-400  text-[10px] uppercase font-semibold ">
-                Completed
-              </small>
-            </div>
-            <div className="flex gap-3 items-center">
-              <div className="bg-red-300 w-2 h-2"></div>
-              <small className="text-gray-400  text-[10px] uppercase font-semibold ">
-                For QA
+                Backend
               </small>
             </div>
           </div>
