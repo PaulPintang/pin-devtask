@@ -344,9 +344,10 @@ const Task = () => {
       {/* ModalView */}
       <div>
         <Modal
+          size="sm"
           opened={opened}
           onClose={() => setOpened(false)}
-          title="Task: FE | OKR Card Component"
+          title="Task: FE | Store Voucher Page"
         >
           <div>
             <div className="flex flex-col md:flex-row lg:flex-row lg:justify-start lg:items-center gap-2 md:gap-4 lg:gap-4 pb-3">
@@ -372,22 +373,25 @@ const Task = () => {
             <div className="space-y-3 pl-3">
               <div>
                 <p className="text-gray-700 text-[14px]">
-                  Thursday, April 21, 2022
+                  Date: Thursday, April 21, 2022
                 </p>
-                <div className="flex gap-2 items-center text-[12px] text-gray-500">
-                  <div className="bg-yellow-300 w-2 h-2"></div>
-                  <p className=" uppercase font-semibold">Spent:</p>
-                  <span>4</span>
-                </div>
-                <div className="flex gap-2 items-center text-[12px] text-gray-500">
-                  <div className="bg-indigo-300 w-2 h-2"></div>
-                  <p className=" uppercase font-semibold">Spent:</p>
-                  <span>0</span>
-                </div>
-                <div className="flex gap-2 items-center text-[12px] text-gray-500">
-                  <div className="bg-green-300 w-2 h-2"></div>
-                  <p className=" uppercase font-semibold">Recorded:</p>
-                  <span>4</span>
+                <small className="text-gray-500 pl-3">Today Stats:</small>
+                <div className="pl-6">
+                  <div className="flex gap-2 items-center text-[12px] text-gray-500">
+                    <div className="bg-yellow-300 w-2 h-2"></div>
+                    <p className=" uppercase font-semibold">Spent:</p>
+                    <span>4</span>
+                  </div>
+                  <div className="flex gap-2 items-center text-[12px] text-gray-500">
+                    <div className="bg-indigo-300 w-2 h-2"></div>
+                    <p className=" uppercase font-semibold">Spent:</p>
+                    <span>0</span>
+                  </div>
+                  <div className="flex gap-2 items-center text-[12px] text-gray-500">
+                    <div className="bg-green-300 w-2 h-2"></div>
+                    <p className=" uppercase font-semibold">Recorded:</p>
+                    <span>4</span>
+                  </div>
                 </div>
               </div>
               <div>
