@@ -54,7 +54,7 @@ const Task = () => {
             </small>
           </div>
           <div className="flex flex-col gap-3">
-            <div className=" bg-opacity-60 rounded-md shadow-md w-full hover:-translate-y-0.5 transition-all">
+            <div className="bg-white rounded-md shadow-md w-full hover:-translate-y-0.5 transition-all">
               <div className="p-4 space-y-2">
                 <div className="bg-indigo-300 w-8 h-1"></div>
                 <div>
@@ -77,7 +77,7 @@ const Task = () => {
                 </div>
               </div>
             </div>
-            <div className=" bg-opacity-60 rounded-md shadow-md w-full  hover:-translate-y-0.5 transition-all">
+            <div className=" bg-white rounded-md shadow-md w-full  hover:-translate-y-0.5 transition-all">
               <div className="p-4 space-y-2">
                 <div className="bg-indigo-300 w-8 h-1"></div>
                 <div>
@@ -111,7 +111,7 @@ const Task = () => {
           <div className="flex flex-col gap-3">
             <div
               onClick={() => setOpened(true)}
-              className=" bg-opacity-60 rounded-md shadow-md w-full cursor-pointer hover:-translate-y-0.5 transition-all"
+              className=" bg-white rounded-md shadow-md w-full cursor-pointer hover:-translate-y-0.5 transition-all"
             >
               <div className="p-4 space-y-2">
                 <div className="bg-blue-300 w-8 h-1"></div>
@@ -152,7 +152,7 @@ const Task = () => {
 
           <div className="flex flex-col gap-3">
             <div className="flex flex-col gap-3">
-              <div className=" bg-opacity-60 rounded-md shadow-md w-full cursor-pointer hover:-translate-y-0.5 transition-all">
+              <div className=" bg-white rounded-md shadow-md w-full cursor-pointer hover:-translate-y-0.5 transition-all">
                 <div className="p-4 space-y-2">
                   <div className="bg-red-300 w-8 h-1"></div>
                   <div>
@@ -192,7 +192,7 @@ const Task = () => {
                   </div>
                 </div>
               </div>
-              <div className=" bg-opacity-60 rounded-md shadow-md w-full cursor-pointer hover:-translate-y-0.5 transition-all">
+              <div className=" bg-white rounded-md shadow-md w-full cursor-pointer hover:-translate-y-0.5 transition-all">
                 <div className="p-4 space-y-2">
                   <div className="bg-red-300 w-8 h-1"></div>
                   <div>
@@ -245,7 +245,7 @@ const Task = () => {
           <div className="flex flex-col gap-3">
             <div className="flex flex-col gap-3">
               <div className="flex flex-col gap-3">
-                <div className=" bg-opacity-60 rounded-md shadow-md w-full cursor-pointer hover:-translate-y-0.5 transition-all">
+                <div className=" bg-white rounded-md shadow-md w-full cursor-pointer hover:-translate-y-0.5 transition-all">
                   <div className="p-4 space-y-2">
                     <div className="bg-green-300 w-8 h-1"></div>
                     <div>
@@ -284,7 +284,7 @@ const Task = () => {
                     </div>
                   </div>
                 </div>
-                <div className=" bg-opacity-60 rounded-md shadow-md w-full cursor-pointer hover:-translate-y-0.5 transition-all">
+                <div className=" bg-white rounded-md shadow-md w-full cursor-pointer hover:-translate-y-0.5 transition-all">
                   <div className="p-4 space-y-2">
                     <div className="bg-green-300 w-8 h-1"></div>
                     <div>
