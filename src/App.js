@@ -10,6 +10,7 @@ import Signup from "./auth/SingUp";
 import HomePage from "./pages/HomePage";
 import Dashboard from "./components/HomePage/pages/Dashboard";
 import Task from "./components/HomePage/pages/Task";
+import TaskView from "./components/HomePage/pages/Task/components/TaskVIew";
 import Timesheet from "./components/HomePage/pages/TimeSheet";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/" element={<HomePage />}>
           <Route path="/" element={<Dashboard />} />
           <Route path="/task" element={<Task />} />
+          <Route path="/taskview" element={<TaskView />} />
           <Route path="/timesheet" element={<Timesheet />} />
         </Route>
       </Routes>
