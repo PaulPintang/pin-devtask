@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // import { Link } from "react-router-dom";
-import { Grid, Badge, Modal } from "@mantine/core";
+import { Grid, Badge, Modal, Button } from "@mantine/core";
 const Task = () => {
   const [opened, setOpened] = useState(false);
   return (
@@ -74,6 +74,9 @@ const Task = () => {
                     <p>Deliverable Link:</p>
                     <span className="text-blue-400 font-semibold">View</span>
                   </div>
+                  <Button mt={3} color="indigo" size="xs">
+                    Start the task
+                  </Button>
                 </div>
               </div>
             </div>
@@ -94,6 +97,9 @@ const Task = () => {
                     <p>Deliverable Link:</p>
                     <span className="text-blue-400 font-semibold">View</span>
                   </div>
+                  <Button mt={3} color="indigo" size="xs">
+                    Start the task
+                  </Button>
                 </div>
               </div>
             </div>
@@ -328,7 +334,7 @@ const Task = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div>{" "}
               </div>
             </div>
           </div>
@@ -336,15 +342,74 @@ const Task = () => {
       </Grid>
 
       {/* ModalView */}
-      <div>
+      {/* <div>
         <Modal
           opened={opened}
           onClose={() => setOpened(false)}
-          title="Introduce yourself!"
+          title="Task: FE | OKR Card Component"
         >
-          {/* Modal content */}
+          <div>
+            <div className="flex flex-col md:flex-row lg:flex-row lg:justify-start lg:items-center gap-2 md:gap-4 lg:gap-4 pb-3">
+              <div className="flex gap-3 items-center">
+                <div className="bg-yellow-300 w-2 h-2"></div>
+                <small className="text-gray-400  text-[10px] uppercase font-semibold ">
+                  AM
+                </small>
+              </div>
+              <div className="flex gap-3 items-center">
+                <div className="bg-indigo-300 w-2 h-2"></div>
+                <small className="text-gray-400  text-[10px] uppercase font-semibold ">
+                  PM
+                </small>
+              </div>
+              <div className="flex gap-3 items-center">
+                <div className="bg-green-300 w-2 h-2"></div>
+                <small className="text-gray-400  text-[10px] uppercase font-semibold ">
+                  Recorded
+                </small>
+              </div>
+            </div>
+            <div className="space-y-3 pl-3">
+              <div>
+                <div className="flex gap-2 items-center text-[12px] text-gray-500">
+                  <div className="bg-yellow-300 w-2 h-2"></div>
+                  <p className=" uppercase font-semibold">Spent:</p>
+                  <span>0</span>
+                </div>
+                <div className="flex gap-2 items-center text-[12px] text-gray-500">
+                  <div className="bg-indigo-300 w-2 h-2"></div>
+                  <p className=" uppercase font-semibold">Spent:</p>
+                  <span>0</span>
+                </div>
+                <div className="flex gap-2 items-center text-[12px] text-gray-500">
+                  <div className="bg-green-300 w-2 h-2"></div>
+                  <p className=" uppercase font-semibold">Recorded:</p>
+                  <span>0</span>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <div className="flex gap-2 items-center text-[13px] text-gray-500">
+                    <p>Ticket:</p>
+                    <span>0903000000001598</span>
+                  </div>
+                  <div className="flex gap-2 items-center text-[13px] text-gray-500">
+                    <p>Added:</p>
+                    <span>April 20, 11:50 AM</span>
+                  </div>
+                  <div className="flex gap-2 items-center text-[13px] text-gray-500">
+                    <p>Deliverable Link:</p>
+                    <span className="text-blue-400 font-semibold">View</span>
+                  </div>
+                </div>
+              </div>
+              <Button mt={3} color="indigo">
+                Start the task
+              </Button>
+            </div>
+          </div>
         </Modal>
-      </div>
+      </div> */}
     </div>
   );
 };
