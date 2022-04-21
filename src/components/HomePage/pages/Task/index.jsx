@@ -361,9 +361,11 @@ const Task = () => {
             <div className="space-y-3 pl-3">
               <div>
                 <p className="text-gray-700 text-[14px]">
-                  Date: Thursday, April 21, 2022
+                  Thursday, April 21, 2022
                 </p>
-                <small className="text-gray-500 pl-3">Today Stats:</small>
+                <small className="text-gray-500 pl-3">
+                  Today stats as of 11:23 AM
+                </small>
                 <div className="pl-6">
                   <div className="flex gap-2 items-center text-[12px] text-gray-500">
                     <div className="bg-yellow-300 w-2 h-2"></div>
