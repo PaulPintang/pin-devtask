@@ -281,6 +281,10 @@ const Task = () => {
                         <p>Spent:</p>
                         <span>8hrs34m</span>
                       </div>
+                      <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                        <p>Comment:</p>
+                        <span>Very good!</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -319,6 +323,10 @@ const Task = () => {
                       <div className="flex gap-2 items-center text-[10px] text-gray-500">
                         <p>Spent:</p>
                         <span>8hrs34m</span>
+                      </div>
+                      <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                        <p>Comment:</p>
+                        <span>Very good!</span>
                       </div>
                     </div>
                   </div>
