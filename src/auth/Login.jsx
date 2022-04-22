@@ -12,9 +12,6 @@ const Login = () => {
           <span className="text-[#4263EB]">iDEV</span>Task
         </h1>
       </Link>
-      <h1>{localStorage.getItem("name")}</h1>
-      <h1>{localStorage.getItem("email")}</h1>
-      <img src={localStorage.getItem("profilePic")} />
       <div className="w-[340px] mx-auto">
         <Card shadow="sm" p="lg" className="space-y-5">
           <div>
