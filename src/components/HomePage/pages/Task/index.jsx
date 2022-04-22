@@ -429,13 +429,16 @@ const Task = () => {
             <div className="flex justify-between items-center">
               <div className="flex gap-2 items-center text-[12px] text-gray-500">
                 <p className="font-semibold">Status:</p>
-                <span className="bg-green-300 px-2 rounded-md uppercase text-[9px] font-semibold">
+                {/* <span className="bg-green-300 px-2 rounded-md uppercase text-[9px] font-semibold">
                   In-Progress
-                </span>
+                </span> */}
+                <Badge variant="filled" color="red" size="xs">
+                  for qa
+                </Badge>
               </div>
-              <Button size="xs" color="violet" compact>
+              {/* <Button size="xs" color="violet" compact>
                 Mark as done
-              </Button>
+              </Button> */}
             </div>
           </div>
           <Button size="xs" color="green" mt="md" fullWidth>
