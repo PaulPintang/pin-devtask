@@ -414,10 +414,28 @@ const Task = () => {
                 </div>
               </div>
             </div>
-            <div className="pt-3 flex gap-2 items-center text-[12px] text-gray-500">
+
+            <div className="leading-none">
+              <p className="pt-4 text-gray-700">Task Status</p>
+              <small className="text-[10px] text-gray-400">
+                Note: The task must be done before changing it's status!
+              </small>
+            </div>
+            <div className="flex gap-2 items-center text-[12px] text-gray-500">
               <div className="bg-green-300 w-2 h-2"></div>
-              <p className=" uppercase font-semibold">Total Spent Recorded:</p>
+              <p className="font-semibold">Total Spent Recorded:</p>
               <span>23 hours</span>
+            </div>
+            <div className="flex justify-between items-center">
+              <div className="flex gap-2 items-center text-[12px] text-gray-500">
+                <p className="font-semibold">Status:</p>
+                <span className="bg-green-300 px-2 rounded-md uppercase text-[9px] font-semibold">
+                  In-Progress
+                </span>
+              </div>
+              <Button size="xs" color="violet" compact>
+                Mark as done
+              </Button>
             </div>
           </div>
         </Modal>
