@@ -50,12 +50,12 @@ const Navbar = () => {
                 <p className="text-gray-700 text-[12.2px]">Your Task</p>
               </div>
             </Link>
-            <Link to="/performance" style={{ textDecoration: "none" }}>
+            {/* <Link to="/performance" style={{ textDecoration: "none" }}>
               <div className="flex items-center gap-3 w-full bg -gray-100 px-2 py-2 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
                 <BiMessageRounded className="text-gray-400 text-lg" />
                 <p className="text-gray-700 text-[12.2px]">Chat</p>
               </div>
-            </Link>
+            </Link> */}
 
             <Link to="/timesheet" style={{ textDecoration: "none" }}>
               <div className="flex items-center gap-3 w-full bg -gray-100 px-2 py-2 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
