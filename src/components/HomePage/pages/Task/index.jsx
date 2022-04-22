@@ -441,7 +441,7 @@ const Task = () => {
               </Button> */}
             </div>
           </div>
-          <Button size="xs" color="green" mt="md" fullWidth>
+          <Button size="xs" color="cyan" mt="md" fullWidth>
             Notify the QA Personnel
           </Button>
         </Modal>
