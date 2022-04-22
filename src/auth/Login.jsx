@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { signInWithGoogle } from "./firebase/auth";
 
 import { Card, Input, Button, Checkbox, PasswordInput } from "@mantine/core";
 const Login = () => {
@@ -11,6 +12,9 @@ const Login = () => {
           <span className="text-[#4263EB]">iDEV</span>Task
         </h1>
       </Link>
+      <h1>{localStorage.getItem("name")}</h1>
+      <h1>{localStorage.getItem("email")}</h1>
+      <img src={localStorage.getItem("profilePic")} />
       <div className="w-[340px] mx-auto">
         <Card shadow="sm" p="lg" className="space-y-5">
           <div>
@@ -48,7 +52,12 @@ const Login = () => {
           </Button>
           <p className="text-gray-500 text-xs text-center">OR</p>
           <div>
-            <Button variant="light" color="" fullWidth>
+            <Button
+              onClick={signInWithGoogle}
+              variant="light"
+              color=""
+              fullWidth
+            >
               <div className="flex">
                 <p className="text-gray-500">Continue with Google</p>
               </div>
