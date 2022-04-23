@@ -1,15 +1,8 @@
-import React, { createContext, useState } from "react";
-import { initializeApp } from "firebase/app";
+import React, { createContext, useState, useEffect } from "react";
+import { auth, provider } from "../auth/firebase/auth";
+import { signInWithPopup } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-const firebaseConfig = {
-  apiKey: "AIzaSyAAhav59Y_kS6XhNrGVCSf55b5sL_VyUcQ",
-  authDomain: "idevtask--auth.firebaseapp.com",
-  projectId: "idevtask--auth",
-  storageBucket: "idevtask--auth.appspot.com",
-  messagingSenderId: "37200000588",
-  appId: "1:37200000588:web:ea4fabc09c23c8d686e6e9",
-};
 // const firebaseConfig = {
 //   apiKey: process.env.API_KEY,
 //   authDomain: process.env.AUTH_DOMAIN,
@@ -21,29 +14,21 @@ const firebaseConfig = {
 
 // context
 const AuthContext = createContext();
-
-// firebase
-const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
-const provider = new GoogleAuthProvider();
-
 export const AuthProvider = ({ children }) => {
+  const navigate = useNavigate();
+
   const [user, setUser] = useState();
+  useEffect(() => {
+    let userLocal = localStorage.getItem("name");
+    setUser(userLocal);
+  }, []);
   const signInWithGoogle = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
-        setUser(result.user.displayName);
-        // const email = result.user.email;
-        // const profilePic = result.user.photoURL;
-
-        // pass the user to a state(used for routing)
-        // setUser(name);
-
-        // console.log(user);
+        // setUser(result.user.displayName);
         // pass the data to local storage
         localStorage.setItem("name", result.user.displayName);
-        // localStorage.setItem("email", email);
-        // localStorage.setItem("profilePic", profilePic);
+        navigate("/");
       })
       .catch((error) => {
         console.log(error);

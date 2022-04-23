@@ -1,7 +1,6 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
-import AuthContext from "./context/AuthContext";
 
 // Mantine Components
 import { MantineProvider } from "@mantine/core";
@@ -17,8 +16,6 @@ import TaskView from "./components/HomePage/pages/Task/components/TaskVIew";
 import Timesheet from "./components/HomePage/pages/TimeSheet";
 
 function App() {
-  // const user = useContext(AuthContext);
-  // console.log(user);
   return (
     <MantineProvider emotionOptions={{ key: "mantine", prepend: false }}>
       <AuthProvider>

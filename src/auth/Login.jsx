@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
 import { Card, Input, Button, Checkbox, PasswordInput } from "@mantine/core";
 const Login = () => {
-  const { signInWithGoogle, user } = useContext(AuthContext);
-  console.log(user);
+  const { signInWithGoogle } = useContext(AuthContext);
   const [value, setValue] = useState("");
   return (
     <div className="h-screen flex items-center flex-col justify-around">
