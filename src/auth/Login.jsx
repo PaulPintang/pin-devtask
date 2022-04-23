@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import { signInWithGoogle } from "./firebase/auth";
-
+import AuthContext from "../context/AuthContext";
 import { Card, Input, Button, Checkbox, PasswordInput } from "@mantine/core";
 const Login = () => {
+  const { signInWithGoogle, user } = useContext(AuthContext);
+  console.log(user);
   const [value, setValue] = useState("");
   return (
     <div className="h-screen flex items-center flex-col justify-around">
@@ -32,7 +33,6 @@ const Login = () => {
             <PasswordInput
               value={value}
               onChange={(event) => setValue(event.currentTarget.value)}
-              defaultValue="secret"
               variant="default"
               placeholder="Password"
               type="password"

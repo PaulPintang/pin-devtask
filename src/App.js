@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Route, Routes } from "react-router-dom";
+import { AuthProvider } from "./context/AuthContext";
+import AuthContext from "./context/AuthContext";
+
 // Mantine Components
 import { MantineProvider } from "@mantine/core";
 // Components
@@ -14,19 +17,23 @@ import TaskView from "./components/HomePage/pages/Task/components/TaskVIew";
 import Timesheet from "./components/HomePage/pages/TimeSheet";
 
 function App() {
+  // const user = useContext(AuthContext);
+  // console.log(user);
   return (
     <MantineProvider emotionOptions={{ key: "mantine", prepend: false }}>
-      <Routes>
-        {/* <Route path="/" element={<LandingPage />} /> */}
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/" element={<HomePage />}>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/task" element={<Task />} />
-          <Route path="/taskview" element={<TaskView />} />
-          <Route path="/timesheet" element={<Timesheet />} />
-        </Route>
-      </Routes>
+      <AuthProvider>
+        <Routes>
+          {/* <Route path="/" element={<LandingPage />} /> */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/" element={<HomePage />}>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/task" element={<Task />} />
+            <Route path="/taskview" element={<TaskView />} />
+            <Route path="/timesheet" element={<Timesheet />} />
+          </Route>
+        </Routes>
+      </AuthProvider>
     </MantineProvider>
   );
 }

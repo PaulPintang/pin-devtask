@@ -1,12 +1,12 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 const firebaseConfig = {
-  apiKey: process.env.API_KEY,
-  authDomain: process.env.AUTH_DOMAIN,
-  projectId: process.env.PROJECT_ID,
-  storageBucket: process.env.STORAGE_BUCKET,
-  messagingSenderId: process.env.MSG_SENDER_ID,
-  appId: process.env.APP_ID,
+  apiKey: "AIzaSyAAhav59Y_kS6XhNrGVCSf55b5sL_VyUcQ",
+  authDomain: "idevtask--auth.firebaseapp.com",
+  projectId: "idevtask--auth",
+  storageBucket: "idevtask--auth.appspot.com",
+  messagingSenderId: "37200000588",
+  appId: "1:37200000588:web:ea4fabc09c23c8d686e6e9",
 };
 
 const app = initializeApp(firebaseConfig);
