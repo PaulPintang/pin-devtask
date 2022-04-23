@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import { Button } from "@mantine/core";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AuthContext from "../../context/AuthContext";
 const Header = () => {
-  const { user } = useContext(AuthContext);
+  const { setUser, user } = useContext(AuthContext);
+  const navigate = useNavigate();
   return (
     <div className="flex justify-between items-center h-16">
       <Link to="/" style={{ textDecoration: "none" }}>
@@ -26,7 +27,18 @@ const Header = () => {
             </Link>
           </>
         ) : (
-          <p>{user}</p>
+          <>
+            <p>{user}</p>
+            <p
+              onClick={() => {
+                localStorage.removeItem("name");
+                // navigate("/");
+              }}
+              className="cursor-pointer hover:text-blue-500"
+            >
+              Logout
+            </p>
+          </>
         )}
       </div>
     </div>

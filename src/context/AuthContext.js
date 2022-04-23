@@ -1,7 +1,6 @@
 import React, { createContext, useState, useEffect } from "react";
 import { auth, provider } from "../auth/firebase/auth";
 import { signInWithPopup } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
 
 // const firebaseConfig = {
 //   apiKey: process.env.API_KEY,
@@ -15,20 +14,19 @@ import { useNavigate } from "react-router-dom";
 // context
 const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
-  const navigate = useNavigate();
-
   const [user, setUser] = useState();
+  const [isAuth, setIsAuth] = useState(false);
   useEffect(() => {
     let userLocal = localStorage.getItem("name");
     setUser(userLocal);
-  }, []);
+  }, [user]);
   const signInWithGoogle = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
+        setIsAuth(true);
         // setUser(result.user.displayName);
         // pass the data to local storage
         localStorage.setItem("name", result.user.displayName);
-        navigate("/");
       })
       .catch((error) => {
         console.log(error);
@@ -36,7 +34,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ signInWithGoogle, user }}>
+    <AuthContext.Provider value={{ signInWithGoogle, setUser, user, isAuth }}>
       {children}
     </AuthContext.Provider>
   );

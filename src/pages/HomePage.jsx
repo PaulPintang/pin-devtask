@@ -2,20 +2,9 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
 import Navbar from "../components/HomePage/Navbar";
-// import AuthContext from "../context/AuthContext";
 
 // homepage pages
 const HomePage = () => {
-  // const { user } = useContext(AuthContext);
-
-  // const navigate = useNavigate();
-  // useEffect(() => {
-  //   if (user === null) {
-  //     navigate("/login");
-  //   } else {
-  //     navigate("/");
-  //   }
-  // });
   return (
     <div className="">
       <div className="shadow-sm px-7">
