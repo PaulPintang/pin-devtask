@@ -10,6 +10,7 @@ import Login from "./auth/Login";
 import Signup from "./auth/SingUp";
 // Logged in page
 import HomePage from "./pages/HomePage";
+import LandingPage from "./pages/LandingPage";
 import Dashboard from "./components/HomePage/pages/Dashboard";
 import Task from "./components/HomePage/pages/Task";
 import TaskView from "./components/HomePage/pages/Task/components/TaskVIew";
