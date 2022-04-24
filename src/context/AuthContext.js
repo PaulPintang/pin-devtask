@@ -29,6 +29,7 @@ export const AuthProvider = ({ children }) => {
   const signInWithGoogle = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
+        setIsAuth(true);
         navigate("/");
         localStorage.setItem("name", result.user.displayName);
         localStorage.setItem("isAuth", true);
