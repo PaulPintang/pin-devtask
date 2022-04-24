@@ -21,17 +21,18 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     let userLocal = localStorage.getItem("name");
-    let isAuthLocal = localStorage.getItem("isAuth");
-    setIsAuth(isAuthLocal);
+    // let isAuthLocal = localStorage.getItem("isAuth");
+    // setIsAuth(isAuthLocal);
     setUser(userLocal);
-  }, []);
+  }, [isAuth]);
 
   const signInWithGoogle = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
+        setIsAuth(true);
+        navigate("/");
         localStorage.setItem("name", result.user.displayName);
         localStorage.setItem("isAuth", true);
-        navigate("/");
       })
       .catch((error) => {
         console.log(error);
