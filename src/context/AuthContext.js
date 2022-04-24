@@ -16,13 +16,16 @@ import { useNavigate } from "react-router-dom";
 const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState();
+  const [userPic, setUserPic] = useState();
   const [isAuth, setIsAuth] = useState(false);
   let navigate = useNavigate();
 
   useEffect(() => {
     let userLocal = localStorage.getItem("name");
+    let userPic = localStorage.getItem("pic");
     let isAuth = localStorage.getItem("isAuth");
     setUser(userLocal);
+    setUserPic(userPic);
     setIsAuth(isAuth);
   }, [isAuth]);
 
@@ -32,6 +35,7 @@ export const AuthProvider = ({ children }) => {
         setIsAuth(true);
         navigate("/");
         localStorage.setItem("name", result.user.displayName);
+        localStorage.setItem("pic", result.user.photoURL);
         localStorage.setItem("isAuth", true);
       })
       .catch((error) => {
@@ -53,7 +57,7 @@ export const AuthProvider = ({ children }) => {
 
   return (
     <AuthContext.Provider
-      value={{ signInWithGoogle, signOutUser, setUser, user, isAuth }}
+      value={{ signInWithGoogle, signOutUser, setUser, user, userPic, isAuth }}
     >
       {children}
     </AuthContext.Provider>

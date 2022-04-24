@@ -3,7 +3,7 @@ import { Button } from "@mantine/core";
 import { Link, useNavigate } from "react-router-dom";
 import AuthContext from "../../context/AuthContext";
 const Header = () => {
-  const { signOutUser, isAuth, user } = useContext(AuthContext);
+  const { signOutUser, isAuth, userPic } = useContext(AuthContext);
   return (
     <div className="flex justify-between items-center h-16">
       <Link to="/" style={{ textDecoration: "none" }}>
@@ -27,7 +27,9 @@ const Header = () => {
           </>
         ) : (
           <>
-            <p>{user}</p>
+            <div className="w-[30px]">
+              <img src={userPic} alt="" className="w-full rounded-full" />
+            </div>
             <p
               onClick={signOutUser}
               className="cursor-pointer hover:text-blue-500"
