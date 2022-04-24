@@ -1,6 +1,7 @@
 import React, { createContext, useState, useEffect } from "react";
 import { auth, provider } from "../auth/firebase/auth";
-import { signInWithPopup } from "firebase/auth";
+import { signInWithPopup, signOut } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 // const firebaseConfig = {
 //   apiKey: process.env.API_KEY,
@@ -16,6 +17,7 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState();
   const [isAuth, setIsAuth] = useState(false);
+  let navigate = useNavigate();
   useEffect(() => {
     let userLocal = localStorage.getItem("name");
     setUser(userLocal);
@@ -23,18 +25,32 @@ export const AuthProvider = ({ children }) => {
   const signInWithGoogle = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
-        setIsAuth(true);
         // setUser(result.user.displayName);
-        // pass the data to local storage
+        setIsAuth(true);
+        navigate("/");
         localStorage.setItem("name", result.user.displayName);
+        localStorage.setItem("isAuth", false);
       })
       .catch((error) => {
         console.log(error);
       });
   };
+  const signOutUser = () => {
+    signOut(auth)
+      .then(() => {
+        localStorage.clear();
+        setIsAuth(false);
+        navigate("/login");
+      })
+      .catch((error) => {
+        // An error happened.
+      });
+  };
 
   return (
-    <AuthContext.Provider value={{ signInWithGoogle, setUser, user, isAuth }}>
+    <AuthContext.Provider
+      value={{ signInWithGoogle, signOutUser, setUser, user, isAuth }}
+    >
       {children}
     </AuthContext.Provider>
   );

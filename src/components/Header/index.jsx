@@ -3,8 +3,7 @@ import { Button } from "@mantine/core";
 import { Link, useNavigate } from "react-router-dom";
 import AuthContext from "../../context/AuthContext";
 const Header = () => {
-  const { setUser, user } = useContext(AuthContext);
-  const navigate = useNavigate();
+  const { signOutUser, isAuth, user } = useContext(AuthContext);
   return (
     <div className="flex justify-between items-center h-16">
       <Link to="/" style={{ textDecoration: "none" }}>
@@ -13,7 +12,7 @@ const Header = () => {
         </h1>
       </Link>
       <div className="flex items-center gap-3">
-        {user === null ? (
+        {!isAuth ? (
           <>
             <Link to="/login">
               <Button variant="outline" color="indigo" size="xs">
@@ -30,10 +29,7 @@ const Header = () => {
           <>
             <p>{user}</p>
             <p
-              onClick={() => {
-                localStorage.removeItem("name");
-                // navigate("/");
-              }}
+              onClick={signOutUser}
               className="cursor-pointer hover:text-blue-500"
             >
               Logout

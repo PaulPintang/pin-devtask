@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
 import AuthContext from "./context/AuthContext";
 // Mantine Components
@@ -15,17 +15,20 @@ import TaskView from "./components/HomePage/pages/Task/components/TaskVIew";
 import Timesheet from "./components/HomePage/pages/TimeSheet";
 
 function App() {
-  const { user, isAuth } = useContext(AuthContext);
-  // const [test] = useState(false);
+  const { isAuth } = useContext(AuthContext);
   return (
     <MantineProvider emotionOptions={{ key: "mantine", prepend: false }}>
       <Routes>
         <Route
           path="/login"
-          element={isAuth ? <Navigate to="/" /> : <Navigate to="/login" />}
+          element={isAuth ? <Navigate to="/" /> : <Login />}
         />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/" element={<HomePage />}>
+
+        <Route
+          path="/"
+          element={isAuth ? <HomePage /> : <Navigate to="/login" />}
+        >
           <Route path="/" element={<Dashboard />} />
           <Route path="/task" element={<Task />} />
           <Route path="/taskview" element={<TaskView />} />
