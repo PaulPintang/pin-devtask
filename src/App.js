@@ -16,6 +16,7 @@ import Timesheet from "./components/HomePage/pages/TimeSheet";
 
 function App() {
   const { isAuth } = useContext(AuthContext);
+  console.log(isAuth);
   return (
     <MantineProvider emotionOptions={{ key: "mantine", prepend: false }}>
       <Routes>

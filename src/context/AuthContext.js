@@ -18,23 +18,26 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState();
   const [isAuth, setIsAuth] = useState(false);
   let navigate = useNavigate();
+
   useEffect(() => {
     let userLocal = localStorage.getItem("name");
+    let isAuthLocal = localStorage.getItem("isAuth");
+    setIsAuth(isAuthLocal);
     setUser(userLocal);
-  }, [user]);
+  }, []);
+
   const signInWithGoogle = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
-        // setUser(result.user.displayName);
-        setIsAuth(true);
-        navigate("/");
         localStorage.setItem("name", result.user.displayName);
-        localStorage.setItem("isAuth", false);
+        localStorage.setItem("isAuth", true);
+        navigate("/");
       })
       .catch((error) => {
         console.log(error);
       });
   };
+
   const signOutUser = () => {
     signOut(auth)
       .then(() => {
@@ -43,7 +46,7 @@ export const AuthProvider = ({ children }) => {
         navigate("/login");
       })
       .catch((error) => {
-        // An error happened.
+        console.log(error);
       });
   };
 
