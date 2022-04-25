@@ -9,9 +9,10 @@ const LoggedIn = () => {
 
   const handleInput = (e) => {
     setInputVal(e.target.value);
-    if (inputVal.length >= 2) {
+    console.log(inputVal.length);
+    if (inputVal.length >= 1) {
       setCodeInput(true);
-    } else {
+    } else if (inputVal.length === 0) {
       setCodeInput(false);
     }
   };
@@ -23,18 +24,23 @@ const LoggedIn = () => {
         </div>
         {/* <p className="text-cent text-s">Choose to get started</p> */}
         <div className="flex gap-2 px-12">
-          <Button color="indigo" size="xs">
+          <Button color="indigo" size="md">
             Create team
           </Button>
           <Input
             onChange={handleInput}
             value={inputVal}
             variant="default"
-            size="xs"
+            size="md"
             placeholder="Enter a code"
           />
           {codeInput ? (
-            <Button variant="subtle" color="indigo" size="xs">
+            <Button
+              className="transition-all"
+              variant="subtle"
+              color=""
+              size="md"
+            >
               Join
             </Button>
           ) : (
