@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
-import AuthContext from "../../context/AuthContext";
+import AuthContext from "../context/AuthContext";
 import { Container, Button, Input } from "@mantine/core";
-import webdev from "../../assets/webdev.png";
-import Header from "../../components/Header";
+import webdev from "../assets/webdev.png";
+import Header from "../components/Header";
 const LandingPage = () => {
   const [codeInput, setCodeInput] = useState(false);
   const [inputVal, setInputVal] = useState();
