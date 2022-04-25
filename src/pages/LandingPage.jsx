@@ -108,16 +108,28 @@ const LandingPage = () => {
               </p>
               <Input placeholder="School / University" size="xs" />
             </div>
-            <div className="space-y-1">
-              <p className="text-[10px] text-gray-400 uppercase font-semibold">
-                Start Date
-              </p>
-              <DatePicker
-                className="w-full"
-                size="xs"
-                placeholder="Pick date"
-                defaultValue={new Date()}
-              />
+            <div className="flex gap-3">
+              <div className="space-y-1">
+                <p className="text-[10px] text-gray-400 uppercase font-semibold">
+                  OJT Required hours
+                </p>
+                <Input
+                  type="number"
+                  placeholder="Required max hours"
+                  size="xs"
+                />
+              </div>
+              <div className="space-y-1">
+                <p className="text-[10px] text-gray-400 uppercase font-semibold">
+                  Start Date
+                </p>
+                <DatePicker
+                  className="w-full"
+                  size="xs"
+                  placeholder="Pick date"
+                  defaultValue={new Date()}
+                />
+              </div>
             </div>
           </div>
 
