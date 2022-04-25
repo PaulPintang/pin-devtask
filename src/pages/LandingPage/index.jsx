@@ -3,8 +3,6 @@ import AuthContext from "../../context/AuthContext";
 import { Container, Button, Input } from "@mantine/core";
 import webdev from "../../assets/webdev.png";
 import Header from "../../components/Header";
-import Welcome from "./components/Welcome";
-import LoggedIn from "./components/LoggedIn";
 const LandingPage = () => {
   const [codeInput, setCodeInput] = useState(false);
   const [inputVal, setInputVal] = useState();
@@ -53,8 +51,8 @@ const LandingPage = () => {
                       <Button
                         className="transition-all"
                         variant="subtle"
-                        color=""
                         size="md"
+                        loading
                       >
                         Join
                       </Button>
