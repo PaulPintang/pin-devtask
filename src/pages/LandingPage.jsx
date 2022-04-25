@@ -127,7 +127,6 @@ const LandingPage = () => {
                   className="w-full"
                   size="xs"
                   placeholder="Pick date"
-                  defaultValue={new Date()}
                 />
               </div>
             </div>
