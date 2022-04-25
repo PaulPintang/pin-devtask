@@ -95,59 +95,34 @@ const LandingPage = () => {
             Please fill out the following input to get started!
           </span>
 
-          <div className="py-2 space-y-3">
+          <div className="py-2 space-y-3 pb-4">
             <div className="space-y-1">
               <p className="text-[10px] text-gray-400 uppercase font-semibold">
                 Company Name
               </p>
-              <Input placeholder="Task name" size="xs" />
+              <Input placeholder="Company name" size="xs" />
             </div>
             <div className="space-y-1">
               <p className="text-[10px] text-gray-400 uppercase font-semibold">
-                Ticket No.
+                Intern School / University
               </p>
-              <Input placeholder="Ticket number" size="xs" />
+              <Input placeholder="School / University" size="xs" />
             </div>
             <div className="space-y-1">
               <p className="text-[10px] text-gray-400 uppercase font-semibold">
-                Start Date Time
+                Start Date
               </p>
-              <div className="flex justify-between gap-2">
-                <DatePicker
-                  className="w-2/4"
-                  size="xs"
-                  placeholder="Pick date"
-                  defaultValue={new Date()}
-                  disabled
-                />
-                <TimeInput
-                  className="w-2/4"
-                  size="xs"
-                  format="12"
-                  defaultValue={new Date()}
-                  disabled
-                />
-              </div>
-            </div>
-            <div className="space-y-1">
-              <p className="text-[10px] text-gray-400 uppercase font-semibold">
-                End Date Time
-              </p>
-              <div className="flex justify-between gap-2">
-                <DatePicker
-                  className="w-2/4"
-                  size="xs"
-                  placeholder="Pick date"
-                  defaultValue={new Date()}
-                  disabled
-                />
-                <TimeInput className="w-2/4" size="xs" format="12" />
-              </div>
+              <DatePicker
+                className="w-full"
+                size="xs"
+                placeholder="Pick date"
+                defaultValue={new Date()}
+              />
             </div>
           </div>
 
-          <Button mt={3} color="indigo" fullWidth>
-            Start the task
+          <Button color="indigo" fullWidth>
+            Create
           </Button>
         </div>
       </Modal>
