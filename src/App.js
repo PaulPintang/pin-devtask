@@ -4,7 +4,7 @@ import AuthContext from "./context/AuthContext";
 // Mantine Components
 import { MantineProvider } from "@mantine/core";
 // Components
-// import LandingPage from "./pages/LandingPage";
+import LandingPage from "./pages/LandingPage";
 import Login from "./auth/Login";
 import Signup from "./auth/SingUp";
 // Logged in page
@@ -20,6 +20,7 @@ function App() {
   return (
     <MantineProvider emotionOptions={{ key: "mantine", prepend: false }}>
       <Routes>
+        <Route path="/" element={<LandingPage />} />
         <Route
           path="/login"
           element={isAuth ? <Navigate to="/" /> : <Login />}

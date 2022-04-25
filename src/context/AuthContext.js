@@ -48,7 +48,7 @@ export const AuthProvider = ({ children }) => {
       .then(() => {
         localStorage.clear();
         setIsAuth(false);
-        navigate("/login");
+        navigate("/");
       })
       .catch((error) => {
         console.log(error);

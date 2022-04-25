@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import AuthContext from "../../context/AuthContext";
 import me from "../../assets/me.png";
 import img1 from "../../assets/members/img1.png";
 
@@ -7,16 +8,17 @@ import { BiMessageRounded, BiGitRepoForked } from "react-icons/bi";
 import { MdSpaceDashboard, MdTimelapse } from "react-icons/md";
 import { VscTasklist } from "react-icons/vsc";
 const Navbar = () => {
+  const { userPic, user } = useContext(AuthContext);
   return (
     <div className="py-2 flex flex-col justify-between h-full ">
       <div>
         <div className="py-3">
           <div className="flex items-center gap-2 pb-6">
             <div className="w-[50px]">
-              <img src={me} alt="" />
+              <img src={userPic} alt="" className="rounded-full" />
             </div>
             <div className="flex flex-col">
-              <p className="text-[13px]">Paul Justine Pintang</p>
+              <p className="text-[13px]">{user}</p>
               <small className="text-xs text-gray-400 font-extralight">
                 @paulpintang
               </small>
