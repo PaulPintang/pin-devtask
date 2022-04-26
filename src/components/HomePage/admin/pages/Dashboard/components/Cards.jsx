@@ -32,17 +32,11 @@ const Cards = () => {
           <div className="flex gap-3 items-center">
             <div className="bg-indigo-300 w-2 h-2"></div>
             <small className="text-gray-400  text-[10px] uppercase font-semibold ">
-              New
+              Remaining
             </small>
           </div>
           <div className="flex gap-3 items-center">
-            <div className="w-2 h-2 bg-blue-300"></div>
-            <small className="text-gray-400  text-[10px] uppercase font-semibold ">
-              In-Progress
-            </small>
-          </div>
-          <div className="flex gap-3 items-center">
-            <div className="bg-green-300 w-2 h-2"></div>
+            <div className="w-2 h-2 bg-green-300"></div>
             <small className="text-gray-400  text-[10px] uppercase font-semibold ">
               Completed
             </small>
@@ -57,7 +51,7 @@ const Cards = () => {
         <div className="w-full flex justify-between items-center gap-2">
           <div className=" bg-opacity-60 rounded-md shadow-md w-full">
             <div className="h-[80px] text-center p-4">
-              <div className="bg-indigo-300 w-8 h-1"></div>
+              <div className="bg-yellow-300 w-8 h-1"></div>
               <div className="h-full flex items-center justify-between">
                 <div className="bg-gray-100 rounded-full p-2">
                   <FiStar className="text-sm text-gray-400" />
@@ -69,7 +63,7 @@ const Cards = () => {
           </div>
           <div className=" bg-opacity-60 rounded-md shadow-md w-full">
             <div className="h-[80px] text-center p-4">
-              <div className="bg-blue-300 w-8 h-1"></div>
+              <div className="bg-indigo-300 w-8 h-1"></div>
               <div className="h-full flex items-center justify-between">
                 <div className="bg-gray-100 rounded-full p-2">
                   <GiProgression className="text-sm text-gray-400" />
@@ -95,7 +89,7 @@ const Cards = () => {
         <div className="w-full flex justify-between items-center gap-2">
           <div className=" bg-opacity-60 rounded-md shadow-md w-full">
             <div className="h-[80px] text-center p-4">
-              <div className="bg-yellow-300 w-8 h-1"></div>
+              <div className="bg-indigo-300 w-8 h-1"></div>
               <div className="h-full flex items-center justify-between">
                 <div className="bg-gray-100 rounded-full p-2">
                   <MdOutlineMoreTime className="text-sm text-gray-400" />
@@ -108,12 +102,12 @@ const Cards = () => {
           </div>
           <div className=" bg-opacity-60 rounded-md shadow-md w-full">
             <div className="h-[80px] text-center p-4">
-              <div className="bg-blue-300 w-8 h-1"></div>
+              <div className="bg-red-300 w-8 h-1"></div>
               <div className="h-full flex items-center justify-between">
                 <div className="bg-gray-100 rounded-full p-2">
                   <MdPendingActions className="text-sm text-gray-400" />
                 </div>
-                <p className="text-[11px] text-gray-400">For-QA</p>
+                <p className="text-[11px] text-gray-400">Today For-QA</p>
                 <p className="text-[25px]">110</p>
               </div>
             </div>
