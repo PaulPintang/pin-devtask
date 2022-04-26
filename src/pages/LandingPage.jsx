@@ -108,6 +108,12 @@ const LandingPage = () => {
               </p>
               <Input placeholder="School / University" size="xs" />
             </div>
+            <div className="space-y-1">
+              <p className="text-[10px] text-gray-400 uppercase font-semibold">
+                Intern Department
+              </p>
+              <Input placeholder="Intern Department" size="xs" />
+            </div>
             <div className="flex gap-3">
               <div className="space-y-1">
                 <p className="text-[10px] text-gray-400 uppercase font-semibold">
