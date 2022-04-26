@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import pic from "../../../../../../assets/members/img1.png";
 import { FiMoreHorizontal } from "react-icons/fi";
 import { RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri";
 const Table = () => {
@@ -62,7 +63,7 @@ const Table = () => {
               scope="col"
               className="rounded-tr-md md:rounded-none lg:rounded-none py-3 md:pr-3 lg:pr-3 text-left text-[9px] font-[600] text-gray-400 dark:text-gray-50  tracking-wider  bg-gray-100 dark:bg-gray-700 dark:bg-opacity-60 shadow-sm"
             >
-              ID Number
+              Required hours
             </th>
             <th
               scope="col"
@@ -92,24 +93,29 @@ const Table = () => {
         <tbody className="text-[11px] divide-y divide-gray-100 overflow-auto text-gray-600">
           <tr className="border-none ">
             <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell pl-3">
-              FE | BE | Todo App
+              <div className="flex items-center gap-2">
+                <div className="w-[30px]">
+                  <img src={pic} alt="" className="w-full h-full" />
+                </div>
+                <div className="flex flex-col">
+                  <p>Paul Justine Pintang</p>
+                  <small className="text-gray-500">
+                    Code name: PaulPintang-023
+                  </small>
+                </div>
+              </div>
             </td>
             <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
-              0903000000001395
+              386hrs
             </td>
             <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell ">
-              <span className="font-semibold text-[9px] uppercase text-blue-400">
-                View link
-              </span>
+              68hrs
             </td>
             <td className="dark:text-gray-400  px-5  py-2 hidden md:table-cell lg:table-cell ">
-              <span>8hrs14m</span>
+              223hrs
             </td>
             <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
-              <div className="flex bg-gray-100 rounded items-center max-w-max px-2 py-1 gap-2">
-                <div className="w-2 h-2 bg-green-300 "></div>
-                <span className=" text-green-500   text-[9px]">Completed</span>
-              </div>
+              13 task
             </td>
             <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
               <div className="text-gray-500 pr-2">
