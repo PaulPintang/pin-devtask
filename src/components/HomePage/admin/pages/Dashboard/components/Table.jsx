@@ -123,6 +123,102 @@ const Table = () => {
               </div>
             </td>
           </tr>
+          <tr className="border-none ">
+            <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell pl-3">
+              <div className="flex items-center gap-2">
+                <div className="w-[30px]">
+                  <img src={pic} alt="" className="w-full h-full" />
+                </div>
+                <div className="flex flex-col">
+                  <p>Paul Justine Pintang</p>
+                  <small className="text-gray-500">
+                    Code name: PaulPintang-023
+                  </small>
+                </div>
+              </div>
+            </td>
+            <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
+              386hrs
+            </td>
+            <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell ">
+              68hrs
+            </td>
+            <td className="dark:text-gray-400  px-5  py-2 hidden md:table-cell lg:table-cell ">
+              223hrs
+            </td>
+            <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
+              13 task
+            </td>
+            <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
+              <div className="text-gray-500 pr-2">
+                <FiMoreHorizontal className="text-lg" />
+              </div>
+            </td>
+          </tr>
+          <tr className="border-none ">
+            <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell pl-3">
+              <div className="flex items-center gap-2">
+                <div className="w-[30px]">
+                  <img src={pic} alt="" className="w-full h-full" />
+                </div>
+                <div className="flex flex-col">
+                  <p>Paul Justine Pintang</p>
+                  <small className="text-gray-500">
+                    Code name: PaulPintang-023
+                  </small>
+                </div>
+              </div>
+            </td>
+            <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
+              386hrs
+            </td>
+            <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell ">
+              68hrs
+            </td>
+            <td className="dark:text-gray-400  px-5  py-2 hidden md:table-cell lg:table-cell ">
+              223hrs
+            </td>
+            <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
+              13 task
+            </td>
+            <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
+              <div className="text-gray-500 pr-2">
+                <FiMoreHorizontal className="text-lg" />
+              </div>
+            </td>
+          </tr>
+          <tr className="border-none ">
+            <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell pl-3">
+              <div className="flex items-center gap-2">
+                <div className="w-[30px]">
+                  <img src={pic} alt="" className="w-full h-full" />
+                </div>
+                <div className="flex flex-col">
+                  <p>Paul Justine Pintang</p>
+                  <small className="text-gray-500">
+                    Code name: PaulPintang-023
+                  </small>
+                </div>
+              </div>
+            </td>
+            <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
+              386hrs
+            </td>
+            <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell ">
+              68hrs
+            </td>
+            <td className="dark:text-gray-400  px-5  py-2 hidden md:table-cell lg:table-cell ">
+              223hrs
+            </td>
+            <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
+              13 task
+            </td>
+            <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
+              <div className="text-gray-500 pr-2">
+                <FiMoreHorizontal className="text-lg" />
+              </div>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>
