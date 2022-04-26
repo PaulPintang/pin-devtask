@@ -20,7 +20,7 @@ function App() {
   return (
     <MantineProvider emotionOptions={{ key: "mantine", prepend: false }}>
       <Routes>
-        <Route path="/" element={<LandingPage />} />
+        {/* <Route path="/" element={<LandingPage />} /> */}
         <Route
           path="/login"
           element={isAuth ? <Navigate to="/" /> : <Login />}

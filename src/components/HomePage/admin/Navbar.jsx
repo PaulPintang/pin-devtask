@@ -26,11 +26,13 @@ const Navbar = () => {
           </div>
           <div className="space-y-1">
             <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1">
-              <p className="text-gray-400 text-[10px]">REPOSITORY</p>
+              <p className="text-gray-400 text-[10px]">DEPARTMENT</p>
             </div>
             <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1">
               <BiGitRepoForked className="text-gray-400" />
-              <p className="text-gray-700 text-[12.2px]">Components</p>
+              <p className="text-gray-700 text-[12.2px]">
+                Software Development
+              </p>
             </div>
           </div>
           <div className="space-y-">
