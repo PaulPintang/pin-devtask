@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import AuthContext from "../../context/AuthContext";
+import AuthContext from "../../../context/AuthContextext";
 import me from "../../assets/me.png";
 import img1 from "../../assets/members/img1.png";
 

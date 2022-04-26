@@ -51,7 +51,7 @@ const Navbar = () => {
                 "
               >
                 <VscTasklist className="text-gray-400" />
-                <p className="text-gray-700 text-[12.2px]">Your Task</p>
+                <p className="text-gray-700 text-[12.2px]">All Task</p>
               </div>
             </Link>
             {/* <Link to="/performance" style={{ textDecoration: "none" }}>
@@ -60,13 +60,6 @@ const Navbar = () => {
                 <p className="text-gray-700 text-[12.2px]">Chat</p>
               </div>
             </Link> */}
-
-            <Link to="/timesheet" style={{ textDecoration: "none" }}>
-              <div className="flex items-center gap-3 w-full bg -gray-100 px-2 py-2 hover:bg-gray-100 cursor-pointer transition-all rounded-md">
-                <MdTimelapse className="text-gray-400 " />
-                <p className="text-gray-700 text-[12.2px]">TimeSheets</p>
-              </div>
-            </Link>
           </div>
           <div className="space-y-1 ">
             <div className="flex items-center gap-3 w-full bg- gray-100 px-2 py-1 hover:bg-gray-100 cursor-pointer transition-all rounded-md">

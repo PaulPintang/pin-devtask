@@ -13,6 +13,7 @@ const HomePage = () => {
       </div>
       <div className="h-[calc(100vh-4rem)] flex">
         <div className="w-[280px] px-7">
+          {/* add conditon base on account type / admin or intern */}
           {/* <Navbar /> */}
           <AdminNavbar />
         </div>
