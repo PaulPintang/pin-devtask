@@ -55,11 +55,7 @@ const LandingPage = () => {
                       placeholder="Enter a code"
                     />
                     {codeInput ? (
-                      <Button
-                        className="transition-all"
-                        variant="subtle"
-                        size="md"
-                      >
+                      <Button variant="subtle" size="md">
                         Join
                       </Button>
                     ) : (
@@ -88,7 +84,11 @@ const LandingPage = () => {
         </div>
       </div>
       {/* Create Team Modal */}
-      <Modal opened={createTeam} withCloseButton={false}>
+      <Modal
+        opened={createTeam}
+        onClose={() => setCreateTeam(false)}
+        withCloseButton={false}
+      >
         <div className="p-3">
           <p className="text-gray-700">Create Team</p>
           <span className="text-[11px] text-gray-400 ">

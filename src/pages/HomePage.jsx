@@ -1,7 +1,8 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
-import Navbar from "../components/HomePage/Navbar";
+// import Navbar from "../components/HomePage/Navbar";
+import AdminNavbar from "../components/HomePage/admin/Navbar";
 
 // homepage pages
 const HomePage = () => {
@@ -12,7 +13,8 @@ const HomePage = () => {
       </div>
       <div className="h-[calc(100vh-4rem)] flex">
         <div className="w-[280px] px-7">
-          <Navbar />
+          {/* <Navbar /> */}
+          <AdminNavbar />
         </div>
         <div className="bg-slate-50 bg-opacity-30 h-full w-full border-t border-l border-gray-100 p-3">
           <Outlet />
