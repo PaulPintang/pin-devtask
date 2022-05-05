@@ -11,10 +11,16 @@
     "url": "git+https://github.com/PaulPintang/pin-devtask.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "PaulPintang",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/PaulPintang/pin-devtask/issues"
   },
-  "homepage": "https://github.com/PaulPintang/pin-devtask#readme"
+  "homepage": "https://github.com/PaulPintang/pin-devtask#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "mongoose": "^6.3.2"
+  }
 }
