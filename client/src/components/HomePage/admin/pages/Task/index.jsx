@@ -379,8 +379,8 @@ const Task = () => {
                 </small>
               </div>
             </div>
-            <div className="flex items-center gap-2 pb-6">
-              <div className="w-[50px]">
+            <div className="flex items-center gap-2  pb-3">
+              <div className="w-[45px]">
                 <img src={userPic} alt="" className="rounded-full" />
               </div>
               <div className="flex flex-col">
