@@ -8,14 +8,22 @@ const Task = () => {
   const [opened, setOpened] = useState(false);
   const [addTaskModal, setAddTaskModal] = useState(false);
 
-  const [task, setTask] = useState([]);
+  const [tasks, setTasks] = useState([]);
   const [taskName, setTaskName] = useState();
   const [taskTicketNo, setTicketNo] = useState();
   const [taskLink, setTaskLink] = useState();
 
   useEffect(() => {
+    axios.get("http://localhost:5000/api/tasks").then((res) => {
+      console.log("rendered request");
+      setTasks(res.data);
+    });
+    console.log(tasks);
+  }, []);
+
+  useEffect(() => {
     setAddTaskModal(false);
-  }, [task]);
+  }, [tasks]);
 
   const handleTaskname = (e) => {
     setTaskName(e.target.value);
@@ -29,16 +37,16 @@ const Task = () => {
 
   const handleSubmit = (e) => {
     axios
-      .post("http://localhost:5000/api/task", {
+      .post("http://localhost:5000/api/tasks", {
         // addd to database
         taskname: taskName,
         ticketno: taskTicketNo,
         deliverable: taskLink,
       })
       .then(() => {
-        setTask([
+        setTasks([
           // ...spread initial data, show data without refresh
-          ...task,
+          ...tasks,
           // add to state
           {
             taskname: taskName,
@@ -107,52 +115,31 @@ const Task = () => {
           </div>
 
           <div className="flex flex-col gap-3">
-            <div className="bg-white rounded-md shadow-md w-full hover:-translate-y-0.5 transition-all">
-              <div className="p-4 space-y-2">
-                <div className="bg-indigo-300 w-8 h-1"></div>
-                <div>
-                  <p className="text-[13px] ">FE | OKR Card Component</p>
-                  <div className="flex gap-2 items-center text-[10px] text-gray-500">
-                    <p>Ticket:</p>
-                    <span>0903000000001395</span>
+            {tasks.map((task) => (
+              <div className="bg-white rounded-md shadow-md w-full hover:-translate-y-0.5 transition-all">
+                <div className="p-4 space-y-2">
+                  <div className="bg-indigo-300 w-8 h-1"></div>
+                  <div>
+                    <p className="text-[13px] ">{task.taskname}</p>
+                    <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                      <p>Ticket:</p>
+                      <span>{task.ticketno}</span>
+                    </div>
+                    <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                      <p>Added:</p>
+                      <span>April 20, 08:50 AM</span>
+                    </div>
+                    <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                      <p>Deliverable Link:</p>
+                      <span className="text-blue-400 font-semibold">View</span>
+                    </div>
+                    <Button mt={3} color="indigo" size="xs">
+                      Assign
+                    </Button>
                   </div>
-                  <div className="flex gap-2 items-center text-[10px] text-gray-500">
-                    <p>Added:</p>
-                    <span>April 20, 08:50 AM</span>
-                  </div>
-                  <div className="flex gap-2 items-center text-[10px] text-gray-500">
-                    <p>Deliverable Link:</p>
-                    <span className="text-blue-400 font-semibold">View</span>
-                  </div>
-                  <Button mt={3} color="indigo" size="xs">
-                    Assign
-                  </Button>
                 </div>
               </div>
-            </div>
-            <div className=" bg-white rounded-md shadow-md w-full  hover:-translate-y-0.5 transition-all">
-              <div className="p-4 space-y-2">
-                <div className="bg-indigo-300 w-8 h-1"></div>
-                <div>
-                  <p className="text-[13px] ">FE | Store Voucher Page </p>
-                  <div className="flex gap-2 items-center text-[10px] text-gray-500">
-                    <p>Ticket:</p>
-                    <span>0903000000001598</span>
-                  </div>
-                  <div className="flex gap-2 items-center text-[10px] text-gray-500">
-                    <p>Added:</p>
-                    <span>April 20, 11:50 AM</span>
-                  </div>
-                  <div className="flex gap-2 items-center text-[10px] text-gray-500">
-                    <p>Deliverable Link:</p>
-                    <span className="text-blue-400 font-semibold">View</span>
-                  </div>
-                  <Button mt={3} color="indigo" size="xs">
-                    Assign
-                  </Button>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </Grid.Col>
         <Grid.Col span={3}>
