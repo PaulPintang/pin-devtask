@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 // import { Link } from "react-router-dom";
-import { Grid, Badge, Modal, Button } from "@mantine/core";
+import { Grid, Badge, Modal, Button, Input } from "@mantine/core";
 const Task = () => {
   const [opened, setOpened] = useState(false);
+  const [addTaskModal, setAddTaskModal] = useState(false);
   return (
     <div className="p-3">
       <div>
@@ -54,7 +55,12 @@ const Task = () => {
             </small>
           </div>
           <div className="pb-3">
-            <Button color="teal" size="xs" fullWidth>
+            <Button
+              onClick={() => setAddTaskModal(true)}
+              color="teal"
+              size="xs"
+              fullWidth
+            >
               Add new task
             </Button>
           </div>
@@ -344,6 +350,7 @@ const Task = () => {
       </Grid>
 
       {/* ModalView */}
+      {/* View Task In-progress */}
       <div>
         <Modal
           size="sm"
@@ -449,6 +456,43 @@ const Task = () => {
           </div>
           <Button size="xs" color="cyan" mt="md" fullWidth>
             Notify the QA Personnel
+          </Button>
+        </Modal>
+      </div>
+
+      {/* Add task */}
+      <div>
+        <Modal
+          size="sm"
+          opened={addTaskModal}
+          onClose={() => setAddTaskModal(false)}
+          title="Add new task"
+        >
+          <div>
+            <div className="py-2 space-y-3">
+              <div className="space-y-1">
+                <p className="text-[10px] text-gray-400 uppercase font-semibold">
+                  Task name
+                </p>
+                <Input placeholder="Task name" size="xs" />
+              </div>
+              <div className="space-y-1">
+                <p className="text-[10px] text-gray-400 uppercase font-semibold">
+                  Ticket No.
+                </p>
+                <Input placeholder="Ticket number" size="xs" />
+              </div>
+              <div className="space-y-1">
+                <p className="text-[10px] text-gray-400 uppercase font-semibold">
+                  Deliverable Link
+                </p>
+                <Input placeholder="Task link" size="xs" />
+              </div>
+            </div>
+          </div>
+
+          <Button size="xs" color="cyan" mt="md" fullWidth>
+            Add new task
           </Button>
         </Modal>
       </div>
