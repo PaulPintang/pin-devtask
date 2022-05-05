@@ -4,14 +4,14 @@ const Task = require("../models/taskModel");
 
 const getTask = asyncHandler(async (req, res) => {
   const tasks = await Task.find();
-  res.status(200).json(todos);
+  res.status(200).json(tasks);
 });
 
 const addTask = asyncHandler(async (req, res) => {
   const task = await Task.create({
-    taskname: req.body.title,
-    ticketno: req.body.status,
-    deliverable: req.body.completed,
+    taskname: req.body.taskname,
+    ticketno: req.body.ticketno,
+    deliverable: req.body.deliverable,
   });
   res.status(200).json(task);
 });

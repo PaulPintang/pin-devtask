@@ -1,11 +1,56 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import AuthContext from "../../../../../context/AuthContext";
+import axios from "axios";
 // import { Link } from "react-router-dom";
 import { Grid, Badge, Modal, Button, Input } from "@mantine/core";
 const Task = () => {
   const { user, userPic } = useContext(AuthContext);
   const [opened, setOpened] = useState(false);
   const [addTaskModal, setAddTaskModal] = useState(false);
+
+  const [task, setTask] = useState([]);
+  const [taskName, setTaskName] = useState();
+  const [taskTicketNo, setTicketNo] = useState();
+  const [taskLink, setTaskLink] = useState();
+
+  useEffect(() => {
+    setAddTaskModal(false);
+  }, [task]);
+
+  const handleTaskname = (e) => {
+    setTaskName(e.target.value);
+  };
+  const handleTicketNo = (e) => {
+    setTicketNo(e.target.value);
+  };
+  const handleTaskLink = (e) => {
+    setTaskLink(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    axios
+      .post("http://localhost:5000/api/task", {
+        // addd to database
+        taskname: taskName,
+        ticketno: taskTicketNo,
+        deliverable: taskLink,
+      })
+      .then(() => {
+        setTask([
+          // ...spread initial data, show data without refresh
+          ...task,
+          // add to state
+          {
+            taskname: taskName,
+            ticketno: taskTicketNo,
+            deliverable: taskLink,
+          },
+        ]);
+      });
+    // // empty/null the input value after submit
+    // setTask("");
+  };
+
   return (
     <div className="p-3">
       <div>
@@ -485,24 +530,45 @@ const Task = () => {
                 <p className="text-[10px] text-gray-400 uppercase font-semibold">
                   Task name
                 </p>
-                <Input placeholder="Task name" size="xs" />
+                <Input
+                  placeholder="Task name"
+                  size="xs"
+                  onChange={handleTaskname}
+                  value={taskName}
+                />
               </div>
               <div className="space-y-1">
                 <p className="text-[10px] text-gray-400 uppercase font-semibold">
                   Ticket No.
                 </p>
-                <Input placeholder="Ticket number" size="xs" />
+                <Input
+                  placeholder="Ticket number"
+                  size="xs"
+                  onChange={handleTicketNo}
+                  value={taskTicketNo}
+                />
               </div>
               <div className="space-y-1">
                 <p className="text-[10px] text-gray-400 uppercase font-semibold">
                   Deliverable Link
                 </p>
-                <Input placeholder="Task link" size="xs" />
+                <Input
+                  placeholder="Task link"
+                  size="xs"
+                  onChange={handleTaskLink}
+                  value={taskLink}
+                />
               </div>
             </div>
           </div>
 
-          <Button size="xs" color="cyan" mt="md" fullWidth>
+          <Button
+            size="xs"
+            color="cyan"
+            mt="md"
+            onClick={handleSubmit}
+            fullWidth
+          >
             Add new task
           </Button>
         </Modal>
