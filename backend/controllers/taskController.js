@@ -13,6 +13,7 @@ const addTask = asyncHandler(async (req, res) => {
     ticketno: req.body.status,
     deliverable: req.body.completed,
   });
+  res.status(200).json(task);
 });
 
 module.exports = {
