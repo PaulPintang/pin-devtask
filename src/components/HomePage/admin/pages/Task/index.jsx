@@ -14,19 +14,13 @@ const Task = () => {
         <div className="pt-3">
           <div className="flex flex-col md:flex-row lg:flex-row lg:justify-start lg:items-center gap-2 md:gap-4 lg:gap-4 pb-3">
             <div className="flex gap-3 items-center">
-              <div className="bg-yellow-300 w-2 h-2"></div>
-              <small className="text-gray-400  text-[10px] uppercase font-semibold ">
-                All
-              </small>
-            </div>
-            <div className="flex gap-3 items-center">
               <div className="bg-indigo-300 w-2 h-2"></div>
               <small className="text-gray-400  text-[10px] uppercase font-semibold ">
                 New
               </small>
             </div>
             <div className="flex gap-3 items-center">
-              <div className="w-2 h-2 bg-blue-300"></div>
+              <div className="w-2 h-2 bg-yellow-300"></div>
               <small className="text-gray-400  text-[10px] uppercase font-semibold ">
                 In-Progress
               </small>
@@ -84,7 +78,7 @@ const Task = () => {
                     <span className="text-blue-400 font-semibold">View</span>
                   </div>
                   <Button mt={3} color="indigo" size="xs">
-                    Assign the task
+                    Assign
                   </Button>
                 </div>
               </div>
@@ -107,7 +101,7 @@ const Task = () => {
                     <span className="text-blue-400 font-semibold">View</span>
                   </div>
                   <Button mt={3} color="indigo" size="xs">
-                    Assign the task
+                    Assign
                   </Button>
                 </div>
               </div>
@@ -126,7 +120,7 @@ const Task = () => {
               className=" bg-white rounded-md shadow-md w-full cursor-pointer hover:-translate-y-0.5 transition-all"
             >
               <div className="p-4 space-y-2">
-                <div className="bg-blue-300 w-8 h-1"></div>
+                <div className="bg-yellow-300 w-8 h-1"></div>
                 <div>
                   <p className="text-[13px] ">FE | Store Voucher Page </p>
                   <div className="py-1 flex gap-2">
@@ -149,6 +143,10 @@ const Task = () => {
                   <div className="flex gap-2 items-center text-[10px] text-gray-500">
                     <p>Deliverable Link:</p>
                     <span className="text-blue-400 font-semibold">View</span>
+                  </div>
+                  <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                    <p>Assigned to:</p>
+                    <span className="font-semibold">Paul Justine Pintang</span>
                   </div>
                 </div>
               </div>
