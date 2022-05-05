@@ -4,7 +4,7 @@ import AuthContext from "./context/AuthContext";
 // Mantine Components
 import { MantineProvider } from "@mantine/core";
 // Components
-// import LandingPage from "./pages/LandingPage";
+import LandingPage from "./pages/LandingPage";
 import Login from "./auth/Login";
 import Signup from "./auth/SingUp";
 // Logged in page / ADMIN
@@ -13,10 +13,10 @@ import AdminDashboard from "./components/HomePage/admin/pages/Dashboard/";
 import AdminTask from "./components/HomePage/admin/pages/Task";
 // Logged in page / USER
 import HomePage from "./pages/HomePage";
-// import Dashboard from "./components/HomePage/trainee/pages/Dashboard";
-// import Task from "./components/HomePage/trainee/pages/Task";
+import Dashboard from "./components/HomePage/trainee/pages/Dashboard";
+import Task from "./components/HomePage/trainee/pages/Task";
 import TaskView from "./components/HomePage/trainee/pages/Task/components/TaskVIew";
-// import Timesheet from "./components/HomePage/trainee/pages/TimeSheet";
+import Timesheet from "./components/HomePage/trainee/pages/TimeSheet";
 
 function App() {
   const { isAuth } = useContext(AuthContext);
