@@ -15,10 +15,8 @@ const Task = () => {
 
   useEffect(() => {
     axios.get("http://localhost:5000/api/tasks").then((res) => {
-      console.log("rendered request");
       setTasks(res.data);
     });
-    console.log(tasks);
   }, []);
 
   useEffect(() => {
@@ -66,8 +64,8 @@ const Task = () => {
         <div className="flex flex-col">
           <p className="text-gray-700 text-2xl">Manage Task</p>
         </div>
-        <div className="pt-3">
-          <div className="flex flex-col md:flex-row lg:flex-row lg:justify-start lg:items-center gap-2 md:gap-4 lg:gap-4 pb-3">
+        <div className="flex justify-between items-center bg-slate-50 p-2 rounded-sm">
+          <div className="flex flex-col md:flex-row lg:flex-row lg:justify-start lg:items-center gap-2 md:gap-4 lg:gap-4">
             <div className="flex gap-3 items-center">
               <div className="bg-indigo-300 w-2 h-2"></div>
               <small className="text-gray-400  text-[10px] uppercase font-semibold ">
@@ -93,6 +91,9 @@ const Task = () => {
               </small>
             </div>
           </div>
+          <Button onClick={() => setAddTaskModal(true)} color="teal" size="xs">
+            Add new task
+          </Button>
         </div>
       </div>
 
@@ -103,17 +104,6 @@ const Task = () => {
               New Task
             </small>
           </div>
-          <div className="pb-3">
-            <Button
-              onClick={() => setAddTaskModal(true)}
-              color="teal"
-              size="xs"
-              fullWidth
-            >
-              Add new task
-            </Button>
-          </div>
-
           <div className="flex flex-col gap-3">
             {tasks.map((task) => (
               <div className="bg-white rounded-md shadow-md w-full hover:-translate-y-0.5 transition-all">
