@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import AuthContext from "../../../../../context/AuthContext";
 // import { Link } from "react-router-dom";
 import { Grid, Badge, Modal, Button, Input } from "@mantine/core";
 const Task = () => {
+  const { user, userPic } = useContext(AuthContext);
   const [opened, setOpened] = useState(false);
   const [addTaskModal, setAddTaskModal] = useState(false);
   return (
@@ -374,6 +376,17 @@ const Task = () => {
                 <div className="bg-green-300 w-2 h-2"></div>
                 <small className="text-gray-400  text-[10px] uppercase font-semibold ">
                   Recorded
+                </small>
+              </div>
+            </div>
+            <div className="flex items-center gap-2 pb-6">
+              <div className="w-[50px]">
+                <img src={userPic} alt="" className="rounded-full" />
+              </div>
+              <div className="flex flex-col">
+                <p className="text-[13px]">{user}</p>
+                <small className="text-xs text-gray-400 font-extralight">
+                  @paulpintang
                 </small>
               </div>
             </div>
