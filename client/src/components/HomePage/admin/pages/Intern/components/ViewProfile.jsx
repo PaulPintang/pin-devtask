@@ -44,11 +44,17 @@ const ViewProfile = () => {
               <div className="flex gap-3 items-center">
                 <div className="bg-indigo-300 w-2 h-2"></div>
                 <small className="text-gray-400  text-[10px] uppercase font-semibold ">
-                  Remaining
+                  New
                 </small>
               </div>
               <div className="flex gap-3 items-center">
-                <div className="w-2 h-2 bg-green-300"></div>
+                <div className="w-2 h-2 bg-blue-300"></div>
+                <small className="text-gray-400  text-[10px] uppercase font-semibold ">
+                  In-Progress
+                </small>
+              </div>
+              <div className="flex gap-3 items-center">
+                <div className="bg-green-300 w-2 h-2"></div>
                 <small className="text-gray-400  text-[10px] uppercase font-semibold ">
                   Completed
                 </small>
@@ -61,6 +67,7 @@ const ViewProfile = () => {
               </div>
             </div>
           </div>
+
           <div className="w-full flex justify-between items-center gap-2 pb-4">
             <div className=" bg-opacity-60 rounded-md shadow-md w-full">
               <div className="h-[80px] text-center p-4">
@@ -138,6 +145,10 @@ const ViewProfile = () => {
             </div>
           </div>
         </div>
+      </div>
+      <hr className="pb-3 opacity-25" />
+      <div c>
+        <p>Task Progress</p>
       </div>
       <Grid className="h-[calc(100vh- 180px)] overfl ow-y-scroll">
         <Grid.Col span={3}>
