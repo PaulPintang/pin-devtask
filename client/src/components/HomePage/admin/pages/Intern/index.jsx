@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import pic from "../../../../../assets/members/img1.png";
-
-import { FiMoreHorizontal } from "react-icons/fi";
+import { Button } from "@mantine/core";
 import { RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri";
 const Intern = () => {
   const [showFilter, setShowFilter] = useState(false);
@@ -15,7 +14,7 @@ const Intern = () => {
             Pixel8 Web Solutions & Consultancy Inc.
           </p>
           <small className="text-gray-700 text-[11px] italic">
-            Software Developers
+            Software Developers Intern
           </small>
         </div>
       </div>
@@ -77,6 +76,12 @@ const Intern = () => {
                 scope="col"
                 className="rounded-tr-md md:rounded-none lg:rounded-none py-3 md:pr-3 lg:pr-3 text-left text-[9px] font-[600] text-gray-400 dark:text-gray-50  tracking-wider  bg-gray-100 dark:bg-gray-700 dark:bg-opacity-60 shadow-sm"
               >
+                Gender
+              </th>
+              <th
+                scope="col"
+                className="rounded-tr-md md:rounded-none lg:rounded-none py-3 md:pr-3 lg:pr-3 text-left text-[9px] font-[600] text-gray-400 dark:text-gray-50  tracking-wider  bg-gray-100 dark:bg-gray-700 dark:bg-opacity-60 shadow-sm"
+              >
                 Required hours
               </th>
               <th
@@ -120,6 +125,9 @@ const Intern = () => {
                 </div>
               </td>
               <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
+                Male
+              </td>
+              <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
                 386hrs
               </td>
               <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell ">
@@ -132,9 +140,9 @@ const Intern = () => {
                 13 task
               </td>
               <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
-                <div className="text-gray-500 pr-2">
-                  <FiMoreHorizontal className="text-lg" />
-                </div>
+                <Button variant="light" color="indigo" compact size="xs">
+                  View
+                </Button>
               </td>
             </tr>
             <tr className="border-none ">
@@ -152,6 +160,9 @@ const Intern = () => {
                 </div>
               </td>
               <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
+                Male
+              </td>
+              <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
                 386hrs
               </td>
               <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell ">
@@ -164,9 +175,9 @@ const Intern = () => {
                 13 task
               </td>
               <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
-                <div className="text-gray-500 pr-2">
-                  <FiMoreHorizontal className="text-lg" />
-                </div>
+                <Button variant="light" color="indigo" compact size="xs">
+                  View
+                </Button>
               </td>
             </tr>
             <tr className="border-none ">
@@ -184,6 +195,9 @@ const Intern = () => {
                 </div>
               </td>
               <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
+                Male
+              </td>
+              <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
                 386hrs
               </td>
               <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell ">
@@ -196,9 +210,9 @@ const Intern = () => {
                 13 task
               </td>
               <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
-                <div className="text-gray-500 pr-2">
-                  <FiMoreHorizontal className="text-lg" />
-                </div>
+                <Button variant="light" color="indigo" compact size="xs">
+                  View
+                </Button>
               </td>
             </tr>
             <tr className="border-none ">
@@ -216,6 +230,9 @@ const Intern = () => {
                 </div>
               </td>
               <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
+                Male
+              </td>
+              <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
                 386hrs
               </td>
               <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell ">
@@ -228,9 +245,9 @@ const Intern = () => {
                 13 task
               </td>
               <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
-                <div className="text-gray-500 pr-2">
-                  <FiMoreHorizontal className="text-lg" />
-                </div>
+                <Button variant="light" color="indigo" compact size="xs">
+                  View
+                </Button>
               </td>
             </tr>
           </tbody>
