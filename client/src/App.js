@@ -11,6 +11,7 @@ import Signup from "./auth/SingUp";
 // components to render if the account type is admin
 import AdminDashboard from "./components/HomePage/admin/pages/Dashboard/";
 import AdminTask from "./components/HomePage/admin/pages/Task";
+import AdminIntern from "./components/HomePage/admin/pages/Intern";
 // Logged in page / USER
 import HomePage from "./pages/HomePage";
 import Dashboard from "./components/HomePage/trainee/pages/Dashboard";
@@ -38,6 +39,7 @@ function App() {
           {/* add condition here base on account type/ use the Navigate in router */}
           <Route path="/" element={<AdminDashboard />} />
           <Route path="/task" element={<AdminTask />} />
+          <Route path="/manage-intern" element={<AdminIntern />} />
           <Route path="/taskview" element={<TaskView />} />
           {/* student */}
           {/* <Route path="/" element={<Dashboard />} />
