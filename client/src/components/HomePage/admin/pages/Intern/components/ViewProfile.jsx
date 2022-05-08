@@ -22,14 +22,14 @@ const ViewProfile = () => {
   console.log(filtered);
   return (
     <div className="p-3">
-      <div className="flex gap-8 w-full pb-8">
+      <div className="flex gap-5 w-full pb-8">
         <div>
-          <div className="w-[190px]">
+          <div className="w-[180px]">
             <img src={pic} alt="" />
           </div>
           <div className="text-center pt-3 leading-none">
             <p className="text-[13px]">Paul Justine Pintang</p>
-            <small className="text-gray-500 text-xs">Bicol University</small>
+            <small className="text-gray-500 text-xs">paudlp-2134</small>
           </div>
         </div>
         <div className="w-full">
@@ -77,7 +77,7 @@ const ViewProfile = () => {
                     <FiStar className="text-sm text-gray-400" />
                   </div>
                   <p className="text-[11px] text-gray-400">New Task</p>
-                  <p className="text-[25px]">07</p>
+                  <p className="text-[20px]">07</p>
                 </div>
               </div>
             </div>
@@ -89,7 +89,7 @@ const ViewProfile = () => {
                     <GiProgression className="text-sm text-gray-400" />
                   </div>
                   <p className="text-[11px] text-gray-400">In Progress</p>
-                  <p className="text-[25px]">01</p>
+                  <p className="text-[20px]">01</p>
                 </div>
               </div>
             </div>
@@ -101,7 +101,7 @@ const ViewProfile = () => {
                     <BiGitMerge className="text-sm text-gray-400" />
                   </div>
                   <p className="text-[11px] text-gray-400">For QA</p>
-                  <p className="text-[25px]">03</p>
+                  <p className="text-[20px]">03</p>
                 </div>
               </div>
             </div>
@@ -115,7 +115,7 @@ const ViewProfile = () => {
                     <MdOutlineMoreTime className="text-sm text-gray-400" />
                   </div>
                   <p className="text-[11px] text-gray-400">Total Hours</p>
-                  <p className="text-[25px]">376</p>
+                  <p className="text-[20px]">376</p>
                 </div>
               </div>
             </div>
@@ -127,7 +127,7 @@ const ViewProfile = () => {
                     <MdPendingActions className="text-sm text-gray-400" />
                   </div>
                   <p className="text-[11px] text-gray-400">Total Pending</p>
-                  <p className="text-[25px]">110</p>
+                  <p className="text-[20px]">110</p>
                 </div>
               </div>
             </div>
@@ -139,15 +139,72 @@ const ViewProfile = () => {
                     <MdOutlineCalendarToday className="text-sm text-gray-400" />
                   </div>
                   <p className="text-[11px] text-gray-400">Total Today</p>
-                  <p className="text-[25px]">08</p>
+                  <p className="text-[20px]">08</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <div className="bg-white p-4 shadow-md rounded-md h-full space-y-3 relative w-2/4">
+          <div className="flex items-center gap-2">
+            <div className="w-1 h-3 bg-blue-300"></div>
+            <small className="text-gray-800 font-semibold uppercase text-[12px]">
+              Pixel8 Web Solutions & Consultancy Inc
+            </small>
+          </div>
+          <div className="space-y-1 pl-5">
+            <div className="flex gap-2 items-center text-[13px] ">
+              <small className="font-semibold text-gray-500 uppercase">
+                OJT Required Hours:
+              </small>
+              <small className="text-gray-500">486 hours</small>
+            </div>
+            <div className="flex gap-2 items-center text-[13px] ">
+              <small className="font-semibold text-gray-500 uppercase">
+                Started:
+              </small>
+              <small className="text-gray-500">February 17, 2022</small>
+            </div>
+          </div>
+          <div className="space-y-2 ">
+            <div className="flex items-center gap-2">
+              <div className="w-1 h-3 bg-yellow-300"></div>
+              <small className="text-gray-800 font-semibold uppercase text-[12px]">
+                Daily Summary
+              </small>
+            </div>
+            <div className="space-y-1 pl-5">
+              <div className="flex gap-2 items-center text-[13px] ">
+                <small className="font-semibold text-gray-500 uppercase">
+                  No. of Tasks Today:
+                </small>
+                <small className="text-gray-500">01</small>
+              </div>
+              <div className="flex gap-2 items-center text-[13px] ">
+                <small className="font-semibold text-gray-500 uppercase">
+                  Total Hours in Timesheets:
+                </small>
+                <small className="text-gray-500">08 hours</small>
+              </div>
+              <div className="flex gap-2 items-center text-[13px] ">
+                <small className="font-semibold text-gray-500 uppercase">
+                  Total Pending:
+                </small>
+                <small className="text-gray-500">110 hours</small>
+              </div>
+            </div>
+          </div>
+          <div className="flex gap-2 items-center text-[13px] ">
+            <div className="w-1 h-3 bg-green-300"></div>
+            <small className="font-semibold text-gray-800 uppercase">
+              Today:
+            </small>
+            <small className="text-gray-500 ">Monday, April 18</small>
+          </div>
+        </div>
       </div>
       <hr className="opacity-25" />
-      <div className="flex justify-between">
+      <div className="flex justify-between items-center pt-3 pb-3">
         <p className="text-gray-700">Task Progress</p>
         <Button mt={3} color="teal" size="xs" compact>
           Assign new task
