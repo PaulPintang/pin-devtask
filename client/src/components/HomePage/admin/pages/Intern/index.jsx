@@ -151,7 +151,7 @@ const Intern = () => {
                   </div>
                 </td>
                 <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
-                  {intern.hours.gender}
+                  {intern.gender}
                 </td>
                 <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
                   {intern.hours.required}hrs
@@ -160,7 +160,7 @@ const Intern = () => {
                   {intern.hours.pending}hrs
                 </td>
                 <td className="dark:text-gray-400  px-5  py-2 hidden md:table-cell lg:table-cell ">
-                  {intern.total}hrs
+                  {intern.hours.total}hrs
                 </td>
                 <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
                   {intern.completedTask} tasks
