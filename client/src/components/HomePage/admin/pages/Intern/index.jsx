@@ -1,36 +1,38 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import InternContext from "../../../../../context/InternContext";
 import pic from "../../../../../assets/members/img1.png";
 import { Button } from "@mantine/core";
 import { RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 const Intern = () => {
+  const { interns } = useContext(InternContext);
   const [showFilter, setShowFilter] = useState(false);
-  const interns = [
-    {
-      id: 1,
-      name: "Paul Pintang",
-      cname: "paudlp-2134",
-      gender: "Male",
-      completedTask: 13,
-      hours: {
-        required: 386,
-        pending: 68,
-        total: 223,
-      },
-    },
-    {
-      id: 2,
-      name: "John Ackerman",
-      cname: "ackerdlsp-2134",
-      gender: "Male",
-      completedTask: 33,
-      hours: {
-        required: 336,
-        pending: 38,
-        total: 243,
-      },
-    },
-  ];
+  //   const interns = [
+  //     {
+  //       id: 1,
+  //       name: "Paul Pintang",
+  //       cname: "paudlp-2134",
+  //       gender: "Male",
+  //       completedTask: 13,
+  //       hours: {
+  //         required: 386,
+  //         pending: 68,
+  //         total: 223,
+  //       },
+  //     },
+  //     {
+  //       id: 2,
+  //       name: "John Ackerman",
+  //       cname: "ackerdlsp-2134",
+  //       gender: "Male",
+  //       completedTask: 33,
+  //       hours: {
+  //         required: 336,
+  //         pending: 38,
+  //         total: 243,
+  //       },
+  //     },
+  //   ];
   return (
     <div className="p-3">
       <div>

@@ -19,37 +19,41 @@ import Task from "./components/HomePage/trainee/pages/Task";
 import TaskView from "./components/HomePage/trainee/pages/Task/components/TaskVIew";
 import Timesheet from "./components/HomePage/trainee/pages/TimeSheet";
 import ViewProfile from "./components/HomePage/admin/pages/Intern/components/ViewProfile";
+import { InternProvider } from "./context/InternContext";
 
 function App() {
   const { isAuth } = useContext(AuthContext);
   console.log(isAuth);
   return (
     <MantineProvider emotionOptions={{ key: "mantine", prepend: false }}>
-      <Routes>
-        {/* <Route path="/" element={<LandingPage />} /> */}
-        <Route
-          path="/login"
-          element={isAuth ? <Navigate to="/" /> : <Login />}
-        />
-        <Route path="/signup" element={<Signup />} />
+      <InternProvider>
+        <Routes>
+          {/* <Route path="/" element={<LandingPage />} /> */}
+          <Route
+            path="/login"
+            element={isAuth ? <Navigate to="/" /> : <Login />}
+          />
+          <Route path="/signup" element={<Signup />} />
 
-        <Route
-          path="/"
-          element={isAuth ? <HomePage /> : <Navigate to="/login" />}
-        >
-          {/* add condition here base on account type/ use the Navigate in router */}
-          <Route path="/" element={<AdminDashboard />} />
-          <Route path="/task" element={<AdminTask />} />
-          <Route path="/manage-intern" element={<AdminIntern />} />
-          <Route path="/view-profile/:id" element={<ViewProfile />} />
-          <Route path="/taskview" element={<TaskView />} />
-          {/* student */}
-          {/* <Route path="/" element={<Dashboard />} />
+          <Route
+            path="/"
+            element={isAuth ? <HomePage /> : <Navigate to="/login" />}
+          >
+            {/* add condition here base on account type/ use the Navigate in router */}
+            <Route path="/" element={<AdminDashboard />} />
+            <Route path="/task" element={<AdminTask />} />
+            <Route path="/manage-intern" element={<AdminIntern />} />
+            <Route path="/view-profile/:id" element={<ViewProfile />} />
+            <Route path="/taskview" element={<TaskView />} />
+
+            {/* student */}
+            {/* <Route path="/" element={<Dashboard />} />
           <Route path="/task" element={<Task />} />
           <Route path="/taskview" element={<TaskView />} />
           <Route path="/timesheet" element={<Timesheet />} /> */}
-        </Route>
-      </Routes>
+          </Route>
+        </Routes>
+      </InternProvider>
     </MantineProvider>
   );
 }
