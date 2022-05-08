@@ -170,7 +170,7 @@ const Intern = () => {
                 </td>
                 <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
                   {/* <Link to="/view-profile"> */}
-                  <Link to={`/view-profile/${intern.id}`}>
+                  <Link to={`/view-profile/${intern.cname}`}>
                     <Button variant="light" color="indigo" compact size="xs">
                       View
                     </Button>
