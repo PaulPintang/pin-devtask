@@ -8,18 +8,26 @@ const Intern = () => {
     {
       id: 1,
       name: "Paul Pintang",
+      cname: "paudlp-2134",
+      gender: "Male",
+      completedTask: 13,
+      hours: {
+        required: 386,
+        pending: 68,
+        total: 223,
+      },
     },
     {
       id: 2,
-      name: "Paul Prena",
-    },
-    {
-      id: 3,
-      name: "Paul Klein",
-    },
-    {
-      id: 4,
-      name: "Paul Walker",
+      name: "John Ackerman",
+      cname: "ackerdlsp-2134",
+      gender: "Male",
+      completedTask: 33,
+      hours: {
+        required: 336,
+        pending: 38,
+        total: 243,
+      },
     },
   ];
   return (
@@ -127,146 +135,43 @@ const Intern = () => {
             </tr>
           </thead>
           <tbody className="text-[11px] divide-y divide-gray-100 overflow-auto text-gray-600">
-            <tr className="border-none ">
-              <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell pl-3">
-                <div className="flex items-center gap-2">
-                  <div className="w-[30px]">
-                    <img src={pic} alt="" className="w-full h-full" />
+            {interns.map((intern) => (
+              <tr className="border-none ">
+                <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell pl-3">
+                  <div className="flex items-center gap-2">
+                    <div className="w-[30px]">
+                      <img src={pic} alt="" className="w-full h-full" />
+                    </div>
+                    <div className="flex flex-col">
+                      <p>{intern.name}</p>
+                      <small className="text-gray-500">
+                        Code name: {intern.cname}
+                      </small>
+                    </div>
                   </div>
-                  <div className="flex flex-col">
-                    <p>Paul Justine Pintang</p>
-                    <small className="text-gray-500">
-                      Code name: PaulPintang-023
-                    </small>
-                  </div>
-                </div>
-              </td>
-              <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
-                Male
-              </td>
-              <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
-                386hrs
-              </td>
-              <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell ">
-                68hrs
-              </td>
-              <td className="dark:text-gray-400  px-5  py-2 hidden md:table-cell lg:table-cell ">
-                223hrs
-              </td>
-              <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
-                13 task
-              </td>
-              <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
-                <Button variant="light" color="indigo" compact size="xs">
-                  View
-                </Button>
-              </td>
-            </tr>
-            <tr className="border-none ">
-              <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell pl-3">
-                <div className="flex items-center gap-2">
-                  <div className="w-[30px]">
-                    <img src={pic} alt="" className="w-full h-full" />
-                  </div>
-                  <div className="flex flex-col">
-                    <p>Paul Justine Pintang</p>
-                    <small className="text-gray-500">
-                      Code name: PaulPintang-023
-                    </small>
-                  </div>
-                </div>
-              </td>
-              <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
-                Male
-              </td>
-              <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
-                386hrs
-              </td>
-              <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell ">
-                68hrs
-              </td>
-              <td className="dark:text-gray-400  px-5  py-2 hidden md:table-cell lg:table-cell ">
-                223hrs
-              </td>
-              <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
-                13 task
-              </td>
-              <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
-                <Button variant="light" color="indigo" compact size="xs">
-                  View
-                </Button>
-              </td>
-            </tr>
-            <tr className="border-none ">
-              <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell pl-3">
-                <div className="flex items-center gap-2">
-                  <div className="w-[30px]">
-                    <img src={pic} alt="" className="w-full h-full" />
-                  </div>
-                  <div className="flex flex-col">
-                    <p>Paul Justine Pintang</p>
-                    <small className="text-gray-500">
-                      Code name: PaulPintang-023
-                    </small>
-                  </div>
-                </div>
-              </td>
-              <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
-                Male
-              </td>
-              <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
-                386hrs
-              </td>
-              <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell ">
-                68hrs
-              </td>
-              <td className="dark:text-gray-400  px-5  py-2 hidden md:table-cell lg:table-cell ">
-                223hrs
-              </td>
-              <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
-                13 task
-              </td>
-              <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
-                <Button variant="light" color="indigo" compact size="xs">
-                  View
-                </Button>
-              </td>
-            </tr>
-            <tr className="border-none ">
-              <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell pl-3">
-                <div className="flex items-center gap-2">
-                  <div className="w-[30px]">
-                    <img src={pic} alt="" className="w-full h-full" />
-                  </div>
-                  <div className="flex flex-col">
-                    <p>Paul Justine Pintang</p>
-                    <small className="text-gray-500">
-                      Code name: PaulPintang-023
-                    </small>
-                  </div>
-                </div>
-              </td>
-              <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
-                Male
-              </td>
-              <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
-                386hrs
-              </td>
-              <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell ">
-                68hrs
-              </td>
-              <td className="dark:text-gray-400  px-5  py-2 hidden md:table-cell lg:table-cell ">
-                223hrs
-              </td>
-              <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
-                13 task
-              </td>
-              <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
-                <Button variant="light" color="indigo" compact size="xs">
-                  View
-                </Button>
-              </td>
-            </tr>
+                </td>
+                <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
+                  {intern.hours.gender}
+                </td>
+                <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
+                  {intern.hours.required}hrs
+                </td>
+                <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell ">
+                  {intern.hours.pending}hrs
+                </td>
+                <td className="dark:text-gray-400  px-5  py-2 hidden md:table-cell lg:table-cell ">
+                  {intern.total}hrs
+                </td>
+                <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
+                  {intern.completedTask} tasks
+                </td>
+                <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
+                  <Button variant="light" color="indigo" compact size="xs">
+                    View
+                  </Button>
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
