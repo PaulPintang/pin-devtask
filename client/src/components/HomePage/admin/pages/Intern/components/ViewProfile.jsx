@@ -5,7 +5,7 @@ const ViewProfile = () => {
   let params = useParams();
   return (
     <div>
-      <h1>{params.id}</h1>
+      <h1>Profile ID: {params.id}</h1>
     </div>
   );
 };

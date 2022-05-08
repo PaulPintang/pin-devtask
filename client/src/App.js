@@ -18,6 +18,7 @@ import Dashboard from "./components/HomePage/trainee/pages/Dashboard";
 import Task from "./components/HomePage/trainee/pages/Task";
 import TaskView from "./components/HomePage/trainee/pages/Task/components/TaskVIew";
 import Timesheet from "./components/HomePage/trainee/pages/TimeSheet";
+import ViewProfile from "./components/HomePage/admin/pages/Intern/components/ViewProfile";
 
 function App() {
   const { isAuth } = useContext(AuthContext);
@@ -39,11 +40,9 @@ function App() {
           {/* add condition here base on account type/ use the Navigate in router */}
           <Route path="/" element={<AdminDashboard />} />
           <Route path="/task" element={<AdminTask />} />
+          <Route path="/taskview" element={<TaskView />} />
           <Route path="/manage-intern" element={<AdminIntern />} />
-          <Route path="/view-profile:id" element={<AdminIntern />}>
-            <Route path="/taskview" element={<TaskView />} />
-          </Route>
-
+          <Route path="/view-profile/:id" element={<ViewProfile />} />
           {/* student */}
           {/* <Route path="/" element={<Dashboard />} />
           <Route path="/task" element={<Task />} />
