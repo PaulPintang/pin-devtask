@@ -40,9 +40,9 @@ function App() {
           {/* add condition here base on account type/ use the Navigate in router */}
           <Route path="/" element={<AdminDashboard />} />
           <Route path="/task" element={<AdminTask />} />
-          <Route path="/taskview" element={<TaskView />} />
           <Route path="/manage-intern" element={<AdminIntern />} />
           <Route path="/view-profile/:id" element={<ViewProfile />} />
+          <Route path="/taskview" element={<TaskView />} />
           {/* student */}
           {/* <Route path="/" element={<Dashboard />} />
           <Route path="/task" element={<Task />} />
