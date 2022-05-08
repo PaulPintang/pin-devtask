@@ -5,6 +5,7 @@ import img1 from "../../../assets/members/img1.png";
 
 import { Link } from "react-router-dom";
 import { BiMessageRounded, BiGitRepoForked } from "react-icons/bi";
+import { BsPeopleFill } from "react-icons/bs";
 import { MdSpaceDashboard, MdTimelapse } from "react-icons/md";
 import { VscTasklist } from "react-icons/vsc";
 const Navbar = () => {
@@ -59,7 +60,7 @@ const Navbar = () => {
                 className="flex items-center gap-3 w-full bg- gray-100 px-2 py-2 hover:bg-gray-100 cursor-pointer transition-all rounded-md 
                 "
               >
-                <VscTasklist className="text-gray-400" />
+                <BsPeopleFill className="text-gray-400" />
                 <p className="text-gray-700 text-[12.2px]">Intern</p>
               </div>
             </Link>
