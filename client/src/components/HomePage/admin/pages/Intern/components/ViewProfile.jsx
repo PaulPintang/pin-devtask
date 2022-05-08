@@ -146,9 +146,12 @@ const ViewProfile = () => {
           </div>
         </div>
       </div>
-      <hr className="pb-3 opacity-25" />
-      <div c>
-        <p>Task Progress</p>
+      <hr className="opacity-25" />
+      <div className="flex justify-between">
+        <p className="text-gray-700">Task Progress</p>
+        <Button mt={3} color="teal" size="xs" compact>
+          Assign new task
+        </Button>
       </div>
       <Grid className="h-[calc(100vh- 180px)] overfl ow-y-scroll">
         <Grid.Col span={3}>
