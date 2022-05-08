@@ -4,7 +4,24 @@ import { Button } from "@mantine/core";
 import { RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri";
 const Intern = () => {
   const [showFilter, setShowFilter] = useState(false);
-
+  const interns = [
+    {
+      id: 1,
+      name: "Paul Pintang",
+    },
+    {
+      id: 2,
+      name: "Paul Prena",
+    },
+    {
+      id: 3,
+      name: "Paul Klein",
+    },
+    {
+      id: 4,
+      name: "Paul Walker",
+    },
+  ];
   return (
     <div className="p-3">
       <div>
@@ -21,7 +38,7 @@ const Intern = () => {
       <div className="bg-white shadow-md dark:bg-gray-800 mb-8 rounded-md p-2 h">
         <div className="flex justify-between items-center py-2">
           <div>
-            <p className="text-gray-700">All Tasks</p>
+            <p className="text-gray-700">Total: 4 Trainees</p>
           </div>
           <div className="relative ">
             <div
