@@ -1,6 +1,6 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import pic from "../../../../../../assets/members/img1.png";
-
+import { Grid, Button, Badge } from "@mantine/core";
 import { FiStar } from "react-icons/fi";
 import { GiProgression } from "react-icons/gi";
 import { BiGitMerge } from "react-icons/bi";
@@ -14,13 +14,15 @@ import { useParams } from "react-router-dom";
 import InternContext from "../../../../../../context/InternContext";
 
 const ViewProfile = () => {
+  const [opened, setOpened] = useState(false);
+
   const { interns } = useContext(InternContext);
   let { cname } = useParams();
   const filtered = interns.filter((codename) => codename.cname === cname);
   console.log(filtered);
   return (
     <div className="p-3">
-      <div className="flex gap-8 w-full">
+      <div className="flex gap-8 w-full pb-8">
         <div>
           <div className="w-[190px]">
             <img src={pic} alt="" />
@@ -137,6 +139,296 @@ const ViewProfile = () => {
           </div>
         </div>
       </div>
+      <Grid className="h-[calc(100vh- 180px)] overfl ow-y-scroll">
+        <Grid.Col span={3}>
+          <div className="pb-2 sticky top-0 bg-white">
+            <small className="text-gray-400  text-[10px] uppercase font-semibold">
+              New Task
+            </small>
+          </div>
+          <div className="flex flex-col gap-3">
+            <div className="bg-white rounded-md shadow-md w-full hover:-translate-y-0.5 transition-all">
+              <div className="p-4 space-y-2">
+                <div className="bg-indigo-300 w-8 h-1"></div>
+                <div>
+                  <p className="text-[13px] ">FE | OKR Card Component</p>
+                  <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                    <p>Ticket:</p>
+                    <span>0903000000001395</span>
+                  </div>
+                  <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                    <p>Added:</p>
+                    <span>April 20, 08:50 AM</span>
+                  </div>
+                  <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                    <p>Deliverable Link:</p>
+                    <span className="text-blue-400 font-semibold">View</span>
+                  </div>
+                  <Button mt={3} color="indigo" size="xs">
+                    Start the task
+                  </Button>
+                </div>
+              </div>
+            </div>
+            <div className=" bg-white rounded-md shadow-md w-full  hover:-translate-y-0.5 transition-all">
+              <div className="p-4 space-y-2">
+                <div className="bg-indigo-300 w-8 h-1"></div>
+                <div>
+                  <p className="text-[13px] ">FE | Store Voucher Page </p>
+                  <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                    <p>Ticket:</p>
+                    <span>0903000000001598</span>
+                  </div>
+                  <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                    <p>Added:</p>
+                    <span>April 20, 11:50 AM</span>
+                  </div>
+                  <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                    <p>Deliverable Link:</p>
+                    <span className="text-blue-400 font-semibold">View</span>
+                  </div>
+                  <Button mt={3} color="indigo" size="xs">
+                    Start the task
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Grid.Col>
+        <Grid.Col span={3}>
+          <div className="pb-2 sticky top-0 bg-white">
+            <small className="text-gray-400  text-[10px] uppercase font-semibold">
+              In-Progress
+            </small>
+          </div>
+          <div className="flex flex-col gap-3">
+            <div
+              onClick={() => setOpened(true)}
+              className=" bg-white rounded-md shadow-md w-full cursor-pointer hover:-translate-y-0.5 transition-all"
+            >
+              <div className="p-4 space-y-2">
+                <div className="bg-blue-300 w-8 h-1"></div>
+                <div>
+                  <p className="text-[13px] ">FE | Store Voucher Page </p>
+                  <div className="py-1 flex gap-2">
+                    <Badge variant="filled" color="teal" size="xs">
+                      front-end
+                    </Badge>
+                  </div>
+                  <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                    <p>Ticket:</p>
+                    <span>0903000000001598</span>
+                  </div>
+                  <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                    <p>Added:</p>
+                    <span>April 20, 11:50 AM</span>
+                  </div>
+                  <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                    <p>Started:</p>
+                    <span>April 20, 12:00 PM</span>
+                  </div>
+                  <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                    <p>Deliverable Link:</p>
+                    <span className="text-blue-400 font-semibold">View</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Grid.Col>
+        <Grid.Col span={3}>
+          <div className="pb-2 sticky top-0 bg-white">
+            <small className="text-gray-400  text-[10px] uppercase font-semibold">
+              For QA
+            </small>
+          </div>
+
+          <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3">
+              <div className=" bg-white rounded-md shadow-md w-full cursor-pointer hover:-translate-y-0.5 transition-all">
+                <div className="p-4 space-y-2">
+                  <div className="bg-red-300 w-8 h-1"></div>
+                  <div>
+                    <p className="text-[13px] ">BE | Store Voucher</p>
+                    <div className="py-1 flex gap-2">
+                      <Badge variant="light" color="indigo" size="xs">
+                        backend
+                      </Badge>
+                      <Badge variant="filled" color="red" size="xs">
+                        for qa
+                      </Badge>
+                    </div>
+                    <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                      <p>Ticket:</p>
+                      <span>0903000000001598</span>
+                    </div>
+                    <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                      <p>Added:</p>
+                      <span>April 20, 11:50 AM</span>
+                    </div>
+                    <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                      <p>Started:</p>
+                      <span>April 20, 12:00 PM</span>
+                    </div>
+                    <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                      <p>Deliverable Link:</p>
+                      <span className="text-blue-400 font-semibold">View</span>
+                    </div>
+                    <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                      <p>QA Personnel:</p>
+                      <span>Juan Dela Cruz</span>
+                    </div>
+                    <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                      <p>Spent:</p>
+                      <span>8hrs34m</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className=" bg-white rounded-md shadow-md w-full cursor-pointer hover:-translate-y-0.5 transition-all">
+                <div className="p-4 space-y-2">
+                  <div className="bg-red-300 w-8 h-1"></div>
+                  <div>
+                    <p className="text-[13px] ">FE | Store Voucher Page </p>
+                    <div className="py-1 flex gap-2">
+                      <Badge variant="light" color="teal" size="xs">
+                        front-end
+                      </Badge>
+                      <Badge variant="filled" color="red" size="xs">
+                        for qa
+                      </Badge>
+                    </div>
+                    <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                      <p>Ticket:</p>
+                      <span>0903000000001598</span>
+                    </div>
+                    <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                      <p>Added:</p>
+                      <span>April 20, 11:50 AM</span>
+                    </div>
+                    <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                      <p>Started:</p>
+                      <span>April 20, 12:00 PM</span>
+                    </div>
+                    <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                      <p>Deliverable Link:</p>
+                      <span className="text-blue-400 font-semibold">View</span>
+                    </div>
+                    <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                      <p>QA Personnel:</p>
+                      <span>Juan Dela Cruz</span>
+                    </div>
+                    <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                      <p>Spent:</p>
+                      <span>8hrs34m</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Grid.Col>
+        <Grid.Col span={3}>
+          <div className="pb-2 sticky top-0 bg-white">
+            <small className="text-gray-400  text-[10px] uppercase font-semibold">
+              Completed
+            </small>
+          </div>
+
+          <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-3">
+                <div className=" bg-white rounded-md shadow-md w-full cursor-pointer hover:-translate-y-0.5 transition-all">
+                  <div className="p-4 space-y-2">
+                    <div className="bg-green-300 w-8 h-1"></div>
+                    <div>
+                      <p className="text-[13px] ">FE | Store Voucher Page </p>
+                      <div className="py-1 flex gap-2">
+                        <Badge variant="filled" color="green" size="xs">
+                          Completed
+                        </Badge>
+                      </div>
+                      <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                        <p>Ticket:</p>
+                        <span>0903000000001598</span>
+                      </div>
+                      <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                        <p>Added:</p>
+                        <span>April 20, 11:50 AM</span>
+                      </div>
+                      <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                        <p>Started:</p>
+                        <span>April 20, 12:00 PM</span>
+                      </div>
+                      <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                        <p>Deliverable Link:</p>
+                        <span className="text-blue-400 font-semibold">
+                          View
+                        </span>
+                      </div>
+                      <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                        <p>QA Personnel:</p>
+                        <span>Juan Dela Cruz</span>
+                      </div>
+                      <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                        <p>Spent:</p>
+                        <span>8hrs34m</span>
+                      </div>
+                      <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                        <p>Comment:</p>
+                        <span>Very good!</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className=" bg-white rounded-md shadow-md w-full cursor-pointer hover:-translate-y-0.5 transition-all">
+                  <div className="p-4 space-y-2">
+                    <div className="bg-green-300 w-8 h-1"></div>
+                    <div>
+                      <p className="text-[13px] ">FE | Store Voucher Page </p>
+                      <div className="py-1 flex gap-2">
+                        <Badge variant="filled" color="green" size="xs">
+                          Completed
+                        </Badge>
+                      </div>
+                      <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                        <p>Ticket:</p>
+                        <span>0903000000001598</span>
+                      </div>
+                      <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                        <p>Added:</p>
+                        <span>April 20, 11:50 AM</span>
+                      </div>
+                      <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                        <p>Started:</p>
+                        <span>April 20, 12:00 PM</span>
+                      </div>
+                      <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                        <p>Deliverable Link:</p>
+                        <span className="text-blue-400 font-semibold">
+                          View
+                        </span>
+                      </div>
+                      <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                        <p>QA Personnel:</p>
+                        <span>Juan Dela Cruz</span>
+                      </div>
+                      <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                        <p>Spent:</p>
+                        <span>8hrs34m</span>
+                      </div>
+                      <div className="flex gap-2 items-center text-[10px] text-gray-500">
+                        <p>Comment:</p>
+                        <span>Very good!</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>{" "}
+              </div>
+            </div>
+          </div>
+        </Grid.Col>
+      </Grid>
     </div>
   );
 };
