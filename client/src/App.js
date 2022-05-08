@@ -40,7 +40,10 @@ function App() {
           <Route path="/" element={<AdminDashboard />} />
           <Route path="/task" element={<AdminTask />} />
           <Route path="/manage-intern" element={<AdminIntern />} />
-          <Route path="/taskview" element={<TaskView />} />
+          <Route path="/view-profile:id" element={<AdminIntern />}>
+            <Route path="/taskview" element={<TaskView />} />
+          </Route>
+
           {/* student */}
           {/* <Route path="/" element={<Dashboard />} />
           <Route path="/task" element={<Task />} />

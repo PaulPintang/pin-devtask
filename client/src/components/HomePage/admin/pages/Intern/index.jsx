@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import pic from "../../../../../assets/members/img1.png";
 import { Button } from "@mantine/core";
 import { RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri";
+import { Link } from "react-router-dom";
 const Intern = () => {
   const [showFilter, setShowFilter] = useState(false);
   const interns = [
@@ -166,9 +167,11 @@ const Intern = () => {
                   {intern.completedTask} tasks
                 </td>
                 <td className="dark:text-gray-400 py-2 hidden md:table-cell lg:table-cell">
-                  <Button variant="light" color="indigo" compact size="xs">
-                    View
-                  </Button>
+                  <Link to={`/view-profile/${intern.id}`}>
+                    <Button variant="light" color="indigo" compact size="xs">
+                      View
+                    </Button>
+                  </Link>
                 </td>
               </tr>
             ))}
